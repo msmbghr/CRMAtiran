@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="3e0695fbac2344e2b4dc47b3eb6ef144" Name="Diagram1">
+        <EntityTypeShape EntityType="sacModel.CUSTOMERS" Width="1.5" PointX="0.75" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="sacModel.AttachmentKind" Width="1.5" PointX="2.75" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="sacModel.companyTask" Width="1.5" PointX="6" PointY="13" IsExpanded="true" />
+        <EntityTypeShape EntityType="sacModel.ContactType" Width="1.5" PointX="4.75" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="sacModel.convention" Width="1.5" PointX="3" PointY="19" IsExpanded="true" />
+        <EntityTypeShape EntityType="sacModel.conventionDuration" Width="1.5" PointX="0.75" PointY="25.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="sacModel.ConventionLog" Width="1.5" PointX="8.25" PointY="18.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="sacModel.ConventionProductProperty" Width="1.5" PointX="5.75" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="sacModel.conventionType" Width="1.5" PointX="0.75" PointY="28.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="sacModel.customerComputerLog" Width="1.5" PointX="5.25" PointY="17.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="sacModel.customerComputers" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="sacModel.CustomerTablets" Width="1.5" PointX="3" PointY="24.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="sacModel.department" Width="1.5" PointX="3.75" PointY="14.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="sacModel.operatingSystem" Width="1.5" PointX="0.75" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="sacModel.Phase" Width="1.5" PointX="9" PointY="26.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="sacModel.postpone" Width="1.5" PointX="13.5" PointY="20.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="sacModel.product" Width="1.5" PointX="0.75" PointY="31.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="sacModel.ProductProperty" Width="1.5" PointX="2.75" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="sacModel.project" Width="1.5" PointX="6.75" PointY="26.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="sacModel.role" Width="1.5" PointX="6.75" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="sacModel.ShareProjectToDepartment" Width="1.5" PointX="12" PointY="14.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="sacModel.TakhsisTabletAndClientToConvention" Width="1.5" PointX="5.25" PointY="23.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="sacModel.task" Width="1.5" PointX="11.25" PointY="17.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="sacModel.taskAttachment" Width="1.5" PointX="16.5" PointY="20.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="sacModel.taskComment" Width="1.5" PointX="13.5" PointY="17.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="sacModel.taskLog" Width="1.5" PointX="13.5" PointY="24.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="sacModel.taskPriority" Width="1.5" PointX="11.25" PointY="26" IsExpanded="true" />
+        <EntityTypeShape EntityType="sacModel.taskRefer" Width="1.5" PointX="16.5" PointY="16.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="sacModel.taskRelationType" Width="1.5" PointX="9" PointY="15.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="sacModel.taskStatus" Width="1.5" PointX="4.75" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="sacModel.taskSubject" Width="1.5" PointX="11.25" PointY="28.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="sacModel.taskTimeConsumption" Width="1.5" PointX="16.5" PointY="24.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="sacModel.user" Width="1.5" PointX="0.75" PointY="18.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="sacModel.UserKind" Width="1.5" PointX="6.75" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="sacModel.userRole" Width="1.5" PointX="6" PointY="20.125" IsExpanded="true" />
+        <AssociationConnector Association="sacModel.FK_convention_CUSTOMERS" ManuallyRouted="false" />
+        <AssociationConnector Association="sacModel.FK_ConventionLog_CUSTOMERS" ManuallyRouted="false" />
+        <AssociationConnector Association="sacModel.FK_ConventionLog_CUSTOMERS1" ManuallyRouted="false" />
+        <AssociationConnector Association="sacModel.FK_customerComputers_CUSTOMERS" ManuallyRouted="false" />
+        <AssociationConnector Association="sacModel.FK_CustomerTablets_CUSTOMERS" ManuallyRouted="false" />
+        <AssociationConnector Association="sacModel.FK_task_CUSTOMERS" ManuallyRouted="false" />
+        <AssociationConnector Association="sacModel.FK_taskLog_CUSTOMERS" ManuallyRouted="false" />
+        <AssociationConnector Association="sacModel.FK_taskLog_CUSTOMERS1" ManuallyRouted="false" />
+        <AssociationConnector Association="sacModel.FK_ConventionLog_companyTask" ManuallyRouted="false" />
+        <AssociationConnector Association="sacModel.FK_ConventionLog_ConventionLog" ManuallyRouted="false" />
+        <AssociationConnector Association="sacModel.FK_Department_Department" ManuallyRouted="false" />
+        <AssociationConnector Association="sacModel.FK_userRole_companyTask" ManuallyRouted="false" />
+        <AssociationConnector Association="sacModel.FK_convention_conventionDuration" ManuallyRouted="false" />
+        <AssociationConnector Association="sacModel.FK_convention_conventionType" ManuallyRouted="false" />
+        <AssociationConnector Association="sacModel.FK_convention_product" ManuallyRouted="false" />
+        <AssociationConnector Association="sacModel.FK_convention_user" ManuallyRouted="false" />
+        <AssociationConnector Association="sacModel.FK_convention_user1" ManuallyRouted="false" />
+        <AssociationConnector Association="sacModel.FK_ConventionLog_convention" ManuallyRouted="false" />
+        <AssociationConnector Association="sacModel.FK_customerComputerLog_convention" ManuallyRouted="false" />
+        <AssociationConnector Association="sacModel.FK_customerComputerLog_convention1" ManuallyRouted="false" />
+        <AssociationConnector Association="sacModel.FK_TakhsisTabletAndClientToConvention_convention" ManuallyRouted="false" />
+        <AssociationConnector Association="sacModel.FK_task_convention" ManuallyRouted="false" />
+        <AssociationConnector Association="sacModel.FK_ConventionLog_conventionDuration" ManuallyRouted="false" />
+        <AssociationConnector Association="sacModel.FK_ConventionLog_conventionDuration1" ManuallyRouted="false" />
+        <AssociationConnector Association="sacModel.FK_ConventionLog_conventionType" ManuallyRouted="false" />
+        <AssociationConnector Association="sacModel.FK_ConventionLog_conventionType1" ManuallyRouted="false" />
+        <AssociationConnector Association="sacModel.FK_ConventionLog_product" ManuallyRouted="false" />
+        <AssociationConnector Association="sacModel.FK_ConventionLog_product1" ManuallyRouted="false" />
+        <AssociationConnector Association="sacModel.FK_ConventionLog_user" ManuallyRouted="false" />
+        <AssociationConnector Association="sacModel.FK_ConventionLog_user1" ManuallyRouted="false" />
+        <AssociationConnector Association="sacModel.FK_ConventionLog_user2" ManuallyRouted="false" />
+        <AssociationConnector Association="sacModel.FK_customerComputerLog_customerComputers" ManuallyRouted="false" />
+        <AssociationConnector Association="sacModel.FK_customerComputers_operatingSystem1" ManuallyRouted="false" />
+        <AssociationConnector Association="sacModel.FK_TakhsisTabletAndClientToConvention_customerComputers" ManuallyRouted="false" />
+        <AssociationConnector Association="sacModel.FK_TakhsisTabletAndClientToConvention_CustomerTablets" ManuallyRouted="false" />
+        <AssociationConnector Association="sacModel.FK_ShareProjectToDepartment_department" ManuallyRouted="false" />
+        <AssociationConnector Association="sacModel.FK_userRole_department" ManuallyRouted="false" />
+        <AssociationConnector Association="sacModel.FK_Phase_project" ManuallyRouted="false" />
+        <AssociationConnector Association="sacModel.FK_task_Phase" ManuallyRouted="false" />
+        <AssociationConnector Association="sacModel.FK_UserRolls_UserRolls" ManuallyRouted="false" />
+        <AssociationConnector Association="sacModel.FK_postpone_task" ManuallyRouted="false" />
+        <AssociationConnector Association="sacModel.FK_postpone_user" ManuallyRouted="false" />
+        <AssociationConnector Association="sacModel.FK_ShareProjectToDepartment_project" ManuallyRouted="false" />
+        <AssociationConnector Association="sacModel.FK_task_project" ManuallyRouted="false" />
+        <AssociationConnector Association="sacModel.FK_userRole_project" ManuallyRouted="false" />
+        <AssociationConnector Association="sacModel.FK_task_taskRelationType" ManuallyRouted="false" />
+        <AssociationConnector Association="sacModel.FK_task_taskSubject" ManuallyRouted="false" />
+        <AssociationConnector Association="sacModel.FK_task_user" ManuallyRouted="false" />
+        <AssociationConnector Association="sacModel.FK_task_user2" ManuallyRouted="false" />
+        <AssociationConnector Association="sacModel.FK_taskAttachment_task" ManuallyRouted="false" />
+        <AssociationConnector Association="sacModel.FK_taskComment_task" ManuallyRouted="false" />
+        <AssociationConnector Association="sacModel.FK_taskLog_task" ManuallyRouted="false" />
+        <AssociationConnector Association="sacModel.FK_taskRefer_task" ManuallyRouted="false" />
+        <AssociationConnector Association="sacModel.FK_taskTimeConsumption_task" ManuallyRouted="false" />
+        <AssociationConnector Association="sacModel.FK_taskAttachment_user" ManuallyRouted="false" />
+        <AssociationConnector Association="sacModel.FK_taskComment_user" ManuallyRouted="false" />
+        <AssociationConnector Association="sacModel.FK_taskLog_taskLog" ManuallyRouted="false" />
+        <AssociationConnector Association="sacModel.FK_taskLog_taskPriority" ManuallyRouted="false" />
+        <AssociationConnector Association="sacModel.FK_taskLog_taskRelationType" ManuallyRouted="false" />
+        <AssociationConnector Association="sacModel.FK_taskLog_taskRelationType1" ManuallyRouted="false" />
+        <AssociationConnector Association="sacModel.FK_taskLog_taskSubject" ManuallyRouted="false" />
+        <AssociationConnector Association="sacModel.FK_taskLog_taskSubject1" ManuallyRouted="false" />
+        <AssociationConnector Association="sacModel.FK_taskLog_user" ManuallyRouted="false" />
+        <AssociationConnector Association="sacModel.FK_taskLog_user1" ManuallyRouted="false" />
+        <AssociationConnector Association="sacModel.FK_taskLog_user2" ManuallyRouted="false" />
+        <AssociationConnector Association="sacModel.FK_taskRefer_user" ManuallyRouted="false" />
+        <AssociationConnector Association="sacModel.FK_taskRefer_user1" ManuallyRouted="false" />
+        <AssociationConnector Association="sacModel.FK_taskTimeConsumption_user" ManuallyRouted="false" />
+        <AssociationConnector Association="sacModel.FK_userRole_user" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="sacModel.select_all_data" Width="1.5" PointX="9.375" PointY="0.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
