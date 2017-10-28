@@ -1,0 +1,31 @@
+﻿USE [sac]
+GO
+
+/****** Object:  View [dbo].[select_all_data]    Script Date: 28/10/2017 07:52:20 ب.ظ ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+
+ALTER view [dbo].[select_all_data] as
+select task.taskCreationDate,task.taskDoneDate,task.comment,CUSTOMERS.MONAME,
+product.productID,task.taskDoneUserID,convention.conventionTypeID,task.CustomerID,
+ems.companyTask.CompanyID,ems.task.departmentID,task.phaseID,task.projectID,
+count(*) as tedad,MAX(EMS.convention.startDate)lastcontract,EMS.product.name,
+convention.countOfSystem,convention.SHMO from EMS.task 
+full outer join EMS.convention on EMS.task.CustomerID=EMS.convention.SHMO 
+left outer join EMS.product on EMS.product.productID=EMS.convention.productID
+inner  join CUSTOMERS on EMS.task.CustomerID=CUSTOMERS.SHMO
+inner  join ems.department on ems.task.departmentID=department.DepartmentID
+inner  join ems.companyTask on ems.department.CompanyID=companyTask.CompanyID
+group by taskCreationDate,task.comment,CUSTOMERS.MONAME,convention.startDate,
+product.name,convention.countOfSystem,taskDoneDate,ems.companyTask.CompanyID,
+ems.task.departmentID,task.phaseID,task.projectID,task.taskDoneUserID,
+convention.conventionTypeID,product.productID,task.CustomerID,convention.SHMO
+
+GO
+
+
