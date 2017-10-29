@@ -371,7 +371,7 @@ namespace APPCRMAtiran
         private void button1_Click_1(object sender, EventArgs e)
         {
             StiReport st = new StiReport();
-            string Path = "stiReport1.mrt";
+            string Path = @"Report\stiReport1.mrt";
             st.Load(Path);
             st.RegBusinessObject("CRMObject", query2.ToList()); // نام شیئی که در دیزانر ایجاد کردیم
             st.Dictionary.SynchronizeBusinessObjects(2);
