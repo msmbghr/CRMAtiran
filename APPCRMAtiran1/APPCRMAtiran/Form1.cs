@@ -377,9 +377,23 @@ namespace APPCRMAtiran
             st.Show();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-            MessageBox.Show(myTXTDate1.getYear().ToString() + "/" + myTXTDate1.getMonth().ToString() + "/" + myTXTDate1.getDay().ToString());
+            if (chbxDate.Checked)
+            {
+                myTXTDate1.Enabled = true;
+                myTXTDate2.Enabled = true;
+                lblSince.Enabled = true;
+                lbluntildate.Enabled = true;
+            }
+            else
+            {
+
+                myTXTDate1.Enabled = false;
+                myTXTDate2.Enabled = false;
+                lblSince.Enabled = false;
+                lbluntildate.Enabled = false;
+            }
         }
     }
 }
