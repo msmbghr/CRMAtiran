@@ -1,0 +1,121 @@
+﻿namespace MyUserControls
+{
+    partial class MyTXTDate
+    {
+        /// <summary> 
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary> 
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Component Designer generated code
+
+        /// <summary> 
+        /// Required method for Designer support - do not modify 
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.TXTDay = new System.Windows.Forms.TextBox();
+            this.TXTMonth = new System.Windows.Forms.TextBox();
+            this.TXTYear = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.SuspendLayout();
+            // 
+            // TXTDay
+            // 
+            this.TXTDay.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.TXTDay.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TXTDay.Font = new System.Drawing.Font("B Yekan", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.TXTDay.Location = new System.Drawing.Point(78, 2);
+            this.TXTDay.Name = "TXTDay";
+            this.TXTDay.Size = new System.Drawing.Size(21, 23);
+            this.TXTDay.TabIndex = 7;
+            this.TXTDay.Text = "        ";
+            this.TXTDay.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // TXTMonth
+            // 
+            this.TXTMonth.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.TXTMonth.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TXTMonth.Font = new System.Drawing.Font("B Yekan", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.TXTMonth.Location = new System.Drawing.Point(50, 2);
+            this.TXTMonth.Name = "TXTMonth";
+            this.TXTMonth.Size = new System.Drawing.Size(20, 23);
+            this.TXTMonth.TabIndex = 8;
+            this.TXTMonth.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // TXTYear
+            // 
+            this.TXTYear.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.TXTYear.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TXTYear.Font = new System.Drawing.Font("B Yekan", 11.25F);
+            this.TXTYear.Location = new System.Drawing.Point(2, 2);
+            this.TXTYear.Name = "TXTYear";
+            this.TXTYear.Size = new System.Drawing.Size(35, 23);
+            this.TXTYear.TabIndex = 9;
+            this.TXTYear.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.label2.Location = new System.Drawing.Point(69, 6);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(13, 20);
+            this.label2.TabIndex = 11;
+            this.label2.Text = "/";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.label1.Location = new System.Drawing.Point(38, 6);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(13, 20);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "/";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // MyTXTDate
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Controls.Add(this.TXTDay);
+            this.Controls.Add(this.TXTMonth);
+            this.Controls.Add(this.TXTYear);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Name = "MyTXTDate";
+            this.Size = new System.Drawing.Size(102, 28);
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.TextBox TXTDay;
+        private System.Windows.Forms.TextBox TXTMonth;
+        private System.Windows.Forms.TextBox TXTYear;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+    }
+}
