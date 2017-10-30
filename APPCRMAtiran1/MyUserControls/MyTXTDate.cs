@@ -35,6 +35,22 @@ namespace MyUserControls
         [Category("MSM_Behavior")]
         [Description("هيچ توضيحي نوشته نشده است")]
         public string SendMessage { get { return msg; } set { msg = value; Invalidate(); } }
+        //public string getDay { get { return TXTDay.Text; }  }
+        //public string getMonth { get { return TXTMonth.Text; } }
+        //public string getYear { get { return TXTYear.Text; } }
+        public int getDay()
+        {
+            return int.Parse(TXTDay.Text);
+        }
+        public int getMonth()
+        {
+            return int.Parse(TXTMonth.Text);
+        }
+        public int getYear()
+        {
+            return int.Parse(TXTYear.Text);
+        }
+
         public MyTXTDate()
         {
             InitializeComponent();
@@ -72,21 +88,7 @@ namespace MyUserControls
         {
 
         }
-        private void TXTDay_Leave(object sender, EventArgs e)
-        {
-            if (TXTDay.Text.Count() == 1)
-            {
-                TXTDay.Text = "0" + TXTDay.Text;
-            }
-
-            TXTDay.BackColor = MouseClickLeave;
-            if (int.Parse(TXTDay.Text) < 1 || int.Parse(TXTDay.Text) > 31 || TXTDay.Text.Length > 2)
-            {
-                TXTDay.Focus();
-                TXTDay.SelectAll();
-            }
-
-        }
+      
         private void TXTDay_KeyUp(object sender, KeyEventArgs e)
         {
 
@@ -112,11 +114,11 @@ namespace MyUserControls
         }
         private void TXTMonth_Leave(object sender, EventArgs e)
         {
-
             if (TXTMonth.Text.Count() == 1)
             {
                 TXTMonth.Text = "0" + TXTMonth.Text;
             }
+            TXTDay.BackColor = MouseClickLeave;
             if ((int.Parse(TXTMonth.Text)) < 1 || int.Parse(TXTMonth.Text) > 12 || TXTMonth.Text.Length > 2)
             {
                 TXTMonth.Focus();
@@ -134,7 +136,24 @@ namespace MyUserControls
             }
             catch
             { }
-            
+
+        }
+        private void TXTDay_Leave(object sender, EventArgs e)
+        {
+            if (TXTDay.Text.Count() == 1)
+            {
+                TXTDay.Text = "0" + TXTDay.Text;
+            }
+
+            TXTDay.BackColor = MouseClickLeave;
+            if (int.Parse(TXTDay.Text) < 1 || int.Parse(TXTDay.Text) > 31 || TXTDay.Text.Length > 2)
+            {
+                TXTDay.Focus();
+                TXTDay.SelectAll();
+                TXTDay.BackColor = MouseClickLeave;
+
+            }
+
         }
         private void TXTMonth_KeyPress(object sender, KeyPressEventArgs e)
         {

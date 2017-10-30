@@ -187,8 +187,7 @@ namespace APPCRMAtiran
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            MyquerysShowData();
-            // dataGridView1.DataSource = query2.ToList();
+            MyquerysShowData();            // dataGridView1.DataSource = query2.ToList();
         }
 
         private void chboxnameCustomers_CheckedChanged(object sender, EventArgs e)
@@ -376,6 +375,11 @@ namespace APPCRMAtiran
             st.RegBusinessObject("CRMObject", query2.ToList()); // نام شیئی که در دیزانر ایجاد کردیم
             st.Dictionary.SynchronizeBusinessObjects(2);
             st.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(myTXTDate1.getYear().ToString() + "/" + myTXTDate1.getMonth().ToString() + "/" + myTXTDate1.getDay().ToString());
         }
     }
 }

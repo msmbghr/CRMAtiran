@@ -76,6 +76,7 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.myTXTDate2 = new MyUserControls.MyTXTDate();
             this.myTXTDate1 = new MyUserControls.MyTXTDate();
+            this.button2 = new System.Windows.Forms.Button();
             this.Task.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -320,6 +321,7 @@
             // 
             this.groupBox1.AutoSize = true;
             this.groupBox1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Controls.Add(this.myTXTDate2);
             this.groupBox1.Controls.Add(this.myTXTDate1);
             this.groupBox1.Controls.Add(this.button1);
@@ -614,14 +616,24 @@
             this.myTXTDate1.AutoSize = true;
             this.myTXTDate1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.myTXTDate1.Font = new System.Drawing.Font("B Yekan", 11.25F);
-            this.myTXTDate1.Location = new System.Drawing.Point(1013, 157);
+            this.myTXTDate1.Location = new System.Drawing.Point(1014, 157);
             this.myTXTDate1.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.myTXTDate1.Mouseclick = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(174)))), ((int)(((byte)(0)))));
             this.myTXTDate1.MouseClickLeave = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.myTXTDate1.Name = "myTXTDate1";
             this.myTXTDate1.SendMessage = null;
-            this.myTXTDate1.Size = new System.Drawing.Size(154, 33);
+            this.myTXTDate1.Size = new System.Drawing.Size(153, 33);
             this.myTXTDate1.TabIndex = 8;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(465, 165);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 32);
+            this.button2.TabIndex = 12;
+            this.button2.Text = "button2";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // Form1
             // 
@@ -693,6 +705,7 @@
         private System.Windows.Forms.Button button1;
         private MyUserControls.MyTXTDate myTXTDate1;
         private MyUserControls.MyTXTDate myTXTDate2;
+        private System.Windows.Forms.Button button2;
     }
 }
 
