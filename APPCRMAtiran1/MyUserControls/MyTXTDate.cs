@@ -118,7 +118,7 @@ namespace MyUserControls
             {
                 TXTMonth.Text = "0" + TXTMonth.Text;
             }
-            TXTDay.BackColor = MouseClickLeave;
+            TXTMonth.BackColor = MouseClickLeave;
             if ((int.Parse(TXTMonth.Text)) < 1 || int.Parse(TXTMonth.Text) > 12 || TXTMonth.Text.Length > 2)
             {
                 TXTMonth.Focus();
