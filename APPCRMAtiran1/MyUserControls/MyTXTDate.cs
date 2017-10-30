@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Globalization;
 
 namespace MyUserControls
 {
@@ -120,6 +121,7 @@ namespace MyUserControls
             {
                 TXTMonth.Focus();
                 TXTMonth.SelectAll();
+                TXTMonth.BackColor = MouseClickLeave;
             }
             try
             {
@@ -132,6 +134,7 @@ namespace MyUserControls
             }
             catch
             { }
+            
         }
         private void TXTMonth_KeyPress(object sender, KeyPressEventArgs e)
         {

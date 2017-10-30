@@ -46,6 +46,12 @@
             this.TXTDay.TabIndex = 7;
             this.TXTDay.Text = "        ";
             this.TXTDay.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TXTDay.TextChanged += new System.EventHandler(this.TXTDay_TextChanged);
+            this.TXTDay.Enter += new System.EventHandler(this.TXTDay_Enter);
+            this.TXTDay.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TXTDay_KeyDown);
+            this.TXTDay.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TXTDay_KeyPress);
+            this.TXTDay.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TXTDay_KeyUp);
+            this.TXTDay.Leave += new System.EventHandler(this.TXTDay_Leave);
             // 
             // TXTMonth
             // 
@@ -57,6 +63,12 @@
             this.TXTMonth.Size = new System.Drawing.Size(20, 23);
             this.TXTMonth.TabIndex = 8;
             this.TXTMonth.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TXTMonth.TextChanged += new System.EventHandler(this.TXTMonth_TextChanged);
+            this.TXTMonth.Enter += new System.EventHandler(this.TXTMonth_Enter);
+            this.TXTMonth.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TXTMonth_KeyDown);
+            this.TXTMonth.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TXTMonth_KeyPress);
+            this.TXTMonth.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TXTDay_KeyUp);
+            this.TXTMonth.Leave += new System.EventHandler(this.TXTMonth_Leave);
             // 
             // TXTYear
             // 
@@ -68,6 +80,10 @@
             this.TXTYear.Size = new System.Drawing.Size(35, 23);
             this.TXTYear.TabIndex = 9;
             this.TXTYear.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TXTYear.Enter += new System.EventHandler(this.TXTYear_Enter);
+            this.TXTYear.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TXTYear_KeyDown);
+            this.TXTYear.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TXTYear_KeyPress);
+            this.TXTYear.Leave += new System.EventHandler(this.TXTYear_Leave);
             // 
             // label2
             // 
@@ -105,6 +121,7 @@
             this.Controls.Add(this.label1);
             this.Name = "MyTXTDate";
             this.Size = new System.Drawing.Size(102, 28);
+            this.Load += new System.EventHandler(this.MyTXTDate_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

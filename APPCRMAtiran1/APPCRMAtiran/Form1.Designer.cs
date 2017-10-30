@@ -66,7 +66,6 @@
             this.cmbcontract = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.lbluntildate = new System.Windows.Forms.Label();
-            this.txtuntildate = new System.Windows.Forms.TextBox();
             this.txtNameCustomers = new System.Windows.Forms.TextBox();
             this.cmbversion = new System.Windows.Forms.ComboBox();
             this.cmbphase = new System.Windows.Forms.ComboBox();
@@ -75,6 +74,8 @@
             this.cmbdepartment = new System.Windows.Forms.ComboBox();
             this.cmbcompany = new System.Windows.Forms.ComboBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.myTXTDate2 = new MyUserControls.MyTXTDate();
+            this.myTXTDate1 = new MyUserControls.MyTXTDate();
             this.Task.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -115,10 +116,10 @@
             this.groupBox2.Controls.Add(this.dataGridView1);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.groupBox2.Location = new System.Drawing.Point(3, 228);
+            this.groupBox2.Location = new System.Drawing.Point(3, 231);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(0);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(1250, 321);
+            this.groupBox2.Size = new System.Drawing.Size(1250, 318);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "نمايش تسك ها";
@@ -165,7 +166,7 @@
             this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(1244, 282);
+            this.dataGridView1.Size = new System.Drawing.Size(1244, 279);
             this.dataGridView1.TabIndex = 0;
             // 
             // Column1
@@ -319,6 +320,8 @@
             // 
             this.groupBox1.AutoSize = true;
             this.groupBox1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.groupBox1.Controls.Add(this.myTXTDate2);
+            this.groupBox1.Controls.Add(this.myTXTDate1);
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.chbxcompany);
             this.groupBox1.Controls.Add(this.chbxContract);
@@ -332,7 +335,6 @@
             this.groupBox1.Controls.Add(this.cmbcontract);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.lbluntildate);
-            this.groupBox1.Controls.Add(this.txtuntildate);
             this.groupBox1.Controls.Add(this.txtNameCustomers);
             this.groupBox1.Controls.Add(this.cmbversion);
             this.groupBox1.Controls.Add(this.cmbphase);
@@ -346,17 +348,17 @@
             this.groupBox1.Location = new System.Drawing.Point(3, 3);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1250, 225);
+            this.groupBox1.Size = new System.Drawing.Size(1250, 228);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(175, 161);
+            this.button1.Location = new System.Drawing.Point(82, 164);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(104, 33);
-            this.button1.TabIndex = 10;
+            this.button1.TabIndex = 11;
             this.button1.Text = "چاپ";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
@@ -447,10 +449,10 @@
             // 
             // btnShowReport
             // 
-            this.btnShowReport.Location = new System.Drawing.Point(65, 161);
+            this.btnShowReport.Location = new System.Drawing.Point(192, 164);
             this.btnShowReport.Name = "btnShowReport";
             this.btnShowReport.Size = new System.Drawing.Size(104, 33);
-            this.btnShowReport.TabIndex = 8;
+            this.btnShowReport.TabIndex = 10;
             this.btnShowReport.Text = "نمايش";
             this.btnShowReport.UseVisualStyleBackColor = true;
             this.btnShowReport.Click += new System.EventHandler(this.button1_Click);
@@ -498,15 +500,6 @@
             this.lbluntildate.Size = new System.Drawing.Size(61, 24);
             this.lbluntildate.TabIndex = 2;
             this.lbluntildate.Text = "تا تاريخ :";
-            // 
-            // txtuntildate
-            // 
-            this.txtuntildate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtuntildate.Font = new System.Drawing.Font("B Yekan", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.txtuntildate.Location = new System.Drawing.Point(768, 161);
-            this.txtuntildate.Name = "txtuntildate";
-            this.txtuntildate.Size = new System.Drawing.Size(153, 32);
-            this.txtuntildate.TabIndex = 11;
             // 
             // txtNameCustomers
             // 
@@ -600,6 +593,36 @@
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // myTXTDate2
+            // 
+            this.myTXTDate2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.myTXTDate2.AutoSize = true;
+            this.myTXTDate2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.myTXTDate2.Font = new System.Drawing.Font("B Yekan", 11.25F);
+            this.myTXTDate2.Location = new System.Drawing.Point(768, 159);
+            this.myTXTDate2.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.myTXTDate2.Mouseclick = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(174)))), ((int)(((byte)(0)))));
+            this.myTXTDate2.MouseClickLeave = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.myTXTDate2.Name = "myTXTDate2";
+            this.myTXTDate2.SendMessage = null;
+            this.myTXTDate2.Size = new System.Drawing.Size(154, 32);
+            this.myTXTDate2.TabIndex = 9;
+            // 
+            // myTXTDate1
+            // 
+            this.myTXTDate1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.myTXTDate1.AutoSize = true;
+            this.myTXTDate1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.myTXTDate1.Font = new System.Drawing.Font("B Yekan", 11.25F);
+            this.myTXTDate1.Location = new System.Drawing.Point(1013, 157);
+            this.myTXTDate1.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.myTXTDate1.Mouseclick = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(174)))), ((int)(((byte)(0)))));
+            this.myTXTDate1.MouseClickLeave = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.myTXTDate1.Name = "myTXTDate1";
+            this.myTXTDate1.SendMessage = null;
+            this.myTXTDate1.Size = new System.Drawing.Size(154, 33);
+            this.myTXTDate1.TabIndex = 8;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -668,7 +691,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column17;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column18;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox txtuntildate;
+        private MyUserControls.MyTXTDate myTXTDate1;
+        private MyUserControls.MyTXTDate myTXTDate2;
     }
 }
 

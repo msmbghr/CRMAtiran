@@ -264,6 +264,12 @@
     </Content>
     <Content Include="MyView.txt" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MyUserControls\MyUserControls.csproj">
+      <Project>{113DD31B-1EF4-465B-AAF6-E78B48166687}</Project>
+      <Name>MyUserControls</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
