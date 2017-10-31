@@ -1,6 +1,6 @@
-﻿namespace WindowsFormsApplication1
+﻿namespace AtiranUpdateFiles
 {
-    partial class Opacity20
+    partial class messagebox
     {
         /// <summary> 
         /// Required designer variable.
@@ -30,16 +30,19 @@
         {
             this.SuspendLayout();
             // 
-            // Opacity20
+            // messagebox
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(788, 542);
+            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.ClientSize = new System.Drawing.Size(712, 591);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Opacity20";
-            this.Opacity = 0.4D;
+            this.Name = "messagebox";
+            this.Opacity = 0.6D;
+            this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.Opacity20_Load);
+            this.Load += new System.EventHandler(this.messagebox_Load);
             this.ResumeLayout(false);
 
         }
