@@ -101,6 +101,12 @@ namespace APPCRMAtiran
             {
                 query2 = query2.Where(u => u.productID.HasValue==true && u.productID.Value == cmbversion.Items.IndexOf(cmbversion.SelectedItem) + 1);
             }
+            if (chbxDate.Checked)
+            {
+                DateTime startdate=Convert.ToDateTime(myTXTDate1.getYear().ToString()+"/"+ myTXTDate1.getMonth().ToString()+"/"+myTXTDate1.getDay().ToString());
+                DateTime enddate = Convert.ToDateTime(myTXTDate1.getYear().ToString() + "/" + myTXTDate1.getMonth().ToString() + "/" + myTXTDate1.getDay().ToString());
+                query2 = query2.Where(u =>Convert.ToDateTime( u.taskCreationDate) >= startdate && Convert.ToDateTime( u.taskCreationDate) <= enddate);
+            }
             dataGridView1.DataSource = query2.ToList();
             fcnfillrows();
 
