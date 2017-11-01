@@ -14,7 +14,7 @@ ALTER view [dbo].[select_all_data] as
 select task.taskCreationDate,task.taskDoneDate,task.comment,CUSTOMERS.MONAME,
 product.productID,task.taskDoneUserID,convention.conventionTypeID,task.CustomerID,
 ems.companyTask.CompanyID,ems.task.departmentID,task.phaseID,task.projectID,
-count(*) as tedad,MAX(EMS.convention.startDate)lastcontract,EMS.product.name,
+count(EMS.convention.SHMO) as tedad,MAX(EMS.convention.startDate)lastcontract,EMS.product.name,
 convention.countOfSystem,convention.SHMO from EMS.task 
 full outer join EMS.convention on EMS.task.CustomerID=EMS.convention.SHMO 
 left outer join EMS.product on EMS.product.productID=EMS.convention.productID
