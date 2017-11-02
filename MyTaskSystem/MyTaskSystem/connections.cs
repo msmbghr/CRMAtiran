@@ -15,11 +15,11 @@ namespace MyTaskSystem
 
         public static  void Myconnections()
         {
-            XmlDocument xmldoc = new XmlDocument();
-            xmldoc.Load(@"GetInfo.xml");
-            string Server = xmldoc.SelectSingleNode("sal/Server").InnerText;
-            string dbName = xmldoc.SelectSingleNode("sal/DatabaseName").InnerText;
-            _connectionString = "Data Source="+Server+";Initial Catalog="+dbName+";User ID=sa;Password=sac-100";
+            //XmlDocument xmldoc = new XmlDocument();
+            //xmldoc.Load(@"GetInfo.xml");
+            //string Server = xmldoc.SelectSingleNode("sal/Server").InnerText;
+            //string dbName = xmldoc.SelectSingleNode("sal/DatabaseName").InnerText;
+            //_connectionString = "Data Source="+Server+";Initial Catalog="+dbName+";User ID=sa;Password=sac-100";
         }
     }
 }

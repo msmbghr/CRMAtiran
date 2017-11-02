@@ -16,7 +16,7 @@ namespace MyTaskSystem
         {
             InitializeComponent();
         }
-
+        taskingEntities t;
         private void myTXTDate1_Load(object sender, EventArgs e)
         {
 
@@ -58,15 +58,28 @@ namespace MyTaskSystem
         {
 
         }
-        
-        taskingEntities t=new taskingEntities().Database.Connection=connections._connectionString;
-        public void showAllData()
+
+        public void rdfs()
         {
-            t.Configuration
+            for (int i = 0; i < dataGridView1.RowCount; i++)
+            {
+                dataGridView1.Rows[i].Cells[0].Value = i + 1;
+            }
         }
+        public void ShowAllData()
+        {
+            t = new taskingEntities();
+            var q = from c in t.tblTask select c;
+            dataGridView1.DataSource = q.ToList();
+            rdfs();
+
+        }
+
+        //taskingEntities t=new taskingEntities().Database.Connection=connections._connectionString;
+
         private void frmMain_Load(object sender, EventArgs e)
         {
-
+            ShowAllData();
         }
     }
 }
