@@ -134,8 +134,9 @@ namespace AtiranUpdateFiles
             catch (Exception ex)
             {
 
-                System.Windows.Forms.MessageBox.Show(ex.Message);
-                Application.Exit();
+                messagebox m1 = new messagebox();
+                m1.gettext("سيستم شما به سرور متصل نيست", "تاييد", "انصراف", 1);
+                m1.ShowDialog(); Application.Exit();
                 
             }
             return "";

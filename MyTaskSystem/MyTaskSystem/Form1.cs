@@ -54,11 +54,6 @@ namespace MyTaskSystem
             panelEdit.Visible = false;
         }
 
-        private void btnRun_Click(object sender, EventArgs e)
-        {
-
-        }
-
         public void rdfs()
         {
             for (int i = 0; i < dataGridView1.RowCount; i++)
@@ -80,6 +75,17 @@ namespace MyTaskSystem
         private void frmMain_Load(object sender, EventArgs e)
         {
             ShowAllData();
+        }
+
+        private void dataGridView1_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            panelEdit.Visible = false;
+
+        }
+
+        private void panel1_Click(object sender, EventArgs e)
+        {
+            panelEdit.Visible = false;
         }
     }
 }

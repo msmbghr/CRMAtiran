@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnRun = new System.Windows.Forms.Button();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
@@ -88,6 +90,7 @@
             this.panel1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.panel1.Size = new System.Drawing.Size(1158, 179);
             this.panel1.TabIndex = 0;
+            this.panel1.Click += new System.EventHandler(this.panel1_Click);
             this.panel1.Enter += new System.EventHandler(this.panel1_Enter);
             // 
             // btnRun
@@ -99,7 +102,7 @@
             this.btnRun.TabIndex = 5;
             this.btnRun.Text = "ثبت";
             this.btnRun.UseVisualStyleBackColor = true;
-            this.btnRun.Click += new System.EventHandler(this.btnRun_Click);
+            this.btnRun.Click += new System.EventHandler(this.panel1_Click);
             // 
             // checkBox1
             // 
@@ -111,6 +114,7 @@
             this.checkBox1.TabIndex = 4;
             this.checkBox1.UseVisualStyleBackColor = true;
             this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            this.checkBox1.Click += new System.EventHandler(this.panel1_Click);
             // 
             // label4
             // 
@@ -121,6 +125,7 @@
             this.label4.Size = new System.Drawing.Size(84, 29);
             this.label4.TabIndex = 4;
             this.label4.Text = "انجام شده";
+            this.label4.Click += new System.EventHandler(this.panel1_Click);
             // 
             // myTXTDate1
             // 
@@ -134,6 +139,7 @@
             this.myTXTDate1.SendMessage = null;
             this.myTXTDate1.Size = new System.Drawing.Size(177, 37);
             this.myTXTDate1.TabIndex = 3;
+            this.myTXTDate1.Click += new System.EventHandler(this.panel1_Click);
             // 
             // richTextBox1
             // 
@@ -143,6 +149,7 @@
             this.richTextBox1.Size = new System.Drawing.Size(448, 113);
             this.richTextBox1.TabIndex = 2;
             this.richTextBox1.Text = "";
+            this.richTextBox1.Click += new System.EventHandler(this.panel1_Click);
             this.richTextBox1.Enter += new System.EventHandler(this.panel1_Enter);
             this.richTextBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
             // 
@@ -153,6 +160,7 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(175, 37);
             this.textBox2.TabIndex = 1;
+            this.textBox2.Click += new System.EventHandler(this.panel1_Click);
             this.textBox2.Enter += new System.EventHandler(this.panel1_Enter);
             this.textBox2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
             // 
@@ -163,6 +171,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(175, 37);
             this.textBox1.TabIndex = 0;
+            this.textBox1.Click += new System.EventHandler(this.panel1_Click);
             this.textBox1.Enter += new System.EventHandler(this.panel1_Enter);
             this.textBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
             // 
@@ -175,6 +184,7 @@
             this.label5.Size = new System.Drawing.Size(47, 29);
             this.label5.TabIndex = 0;
             this.label5.Text = "تاريخ";
+            this.label5.Click += new System.EventHandler(this.panel1_Click);
             // 
             // label3
             // 
@@ -185,6 +195,7 @@
             this.label3.Size = new System.Drawing.Size(61, 29);
             this.label3.TabIndex = 0;
             this.label3.Text = "اولويت";
+            this.label3.Click += new System.EventHandler(this.panel1_Click);
             // 
             // label2
             // 
@@ -195,6 +206,7 @@
             this.label2.Size = new System.Drawing.Size(66, 29);
             this.label2.TabIndex = 0;
             this.label2.Text = "مشتري ";
+            this.label2.Click += new System.EventHandler(this.panel1_Click);
             // 
             // label1
             // 
@@ -205,6 +217,7 @@
             this.label1.Size = new System.Drawing.Size(90, 29);
             this.label1.TabIndex = 0;
             this.label1.Text = "شرح وظيفه";
+            this.label1.Click += new System.EventHandler(this.panel1_Click);
             // 
             // panelEdit
             // 
@@ -367,15 +380,27 @@
             this.Column4,
             this.Column5,
             this.done});
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("B Yekan", 15.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.dataGridView1.RowHeadersVisible = false;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("B Yekan", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            this.dataGridView1.RowTemplate.Height = 40;
             this.dataGridView1.Size = new System.Drawing.Size(1158, 370);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            this.dataGridView1.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_ColumnHeaderMouseClick);
             // 
             // Column6
             // 
