@@ -47,9 +47,9 @@
             this.label10 = new System.Windows.Forms.Label();
             this.btnEdit = new System.Windows.Forms.Button();
             this.myTXTDate2 = new MyUserControls.MyTXTDate();
-            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.rcheditdescriptions = new System.Windows.Forms.RichTextBox();
+            this.txteditNameCustoemrs = new System.Windows.Forms.TextBox();
+            this.txteditProvity = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -212,9 +212,9 @@
             this.panelEdit.Controls.Add(this.label10);
             this.panelEdit.Controls.Add(this.btnEdit);
             this.panelEdit.Controls.Add(this.myTXTDate2);
-            this.panelEdit.Controls.Add(this.richTextBox2);
-            this.panelEdit.Controls.Add(this.textBox3);
-            this.panelEdit.Controls.Add(this.textBox4);
+            this.panelEdit.Controls.Add(this.rcheditdescriptions);
+            this.panelEdit.Controls.Add(this.txteditNameCustoemrs);
+            this.panelEdit.Controls.Add(this.txteditProvity);
             this.panelEdit.Controls.Add(this.label7);
             this.panelEdit.Controls.Add(this.label8);
             this.panelEdit.Controls.Add(this.label9);
@@ -272,30 +272,30 @@
             this.myTXTDate2.Size = new System.Drawing.Size(181, 33);
             this.myTXTDate2.TabIndex = 12;
             // 
-            // richTextBox2
+            // rcheditdescriptions
             // 
-            this.richTextBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.richTextBox2.Location = new System.Drawing.Point(324, 31);
-            this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(448, 113);
-            this.richTextBox2.TabIndex = 11;
-            this.richTextBox2.Text = "";
+            this.rcheditdescriptions.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.rcheditdescriptions.Location = new System.Drawing.Point(324, 31);
+            this.rcheditdescriptions.Name = "rcheditdescriptions";
+            this.rcheditdescriptions.Size = new System.Drawing.Size(448, 113);
+            this.rcheditdescriptions.TabIndex = 11;
+            this.rcheditdescriptions.Text = "";
             // 
-            // textBox3
+            // txteditNameCustoemrs
             // 
-            this.textBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox3.Location = new System.Drawing.Point(886, 107);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(175, 37);
-            this.textBox3.TabIndex = 10;
+            this.txteditNameCustoemrs.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txteditNameCustoemrs.Location = new System.Drawing.Point(886, 107);
+            this.txteditNameCustoemrs.Name = "txteditNameCustoemrs";
+            this.txteditNameCustoemrs.Size = new System.Drawing.Size(175, 37);
+            this.txteditNameCustoemrs.TabIndex = 10;
             // 
-            // textBox4
+            // txteditProvity
             // 
-            this.textBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox4.Location = new System.Drawing.Point(886, 28);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(175, 37);
-            this.textBox4.TabIndex = 5;
+            this.txteditProvity.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txteditProvity.Location = new System.Drawing.Point(886, 28);
+            this.txteditProvity.Name = "txteditProvity";
+            this.txteditProvity.Size = new System.Drawing.Size(175, 37);
+            this.txteditProvity.TabIndex = 5;
             // 
             // label7
             // 
@@ -468,9 +468,9 @@
         private MyUserControls.MyTXTDate myTXTDate1;
         private System.Windows.Forms.CheckBox chbxDone;
         private MyUserControls.MyTXTDate myTXTDate2;
-        private System.Windows.Forms.RichTextBox richTextBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.RichTextBox rcheditdescriptions;
+        private System.Windows.Forms.TextBox txteditNameCustoemrs;
+        private System.Windows.Forms.TextBox txteditProvity;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;

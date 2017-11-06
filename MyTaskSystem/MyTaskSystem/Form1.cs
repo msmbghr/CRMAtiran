@@ -43,6 +43,7 @@ namespace MyTaskSystem
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             panelEdit.Visible = true;
+            txteditProvity.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
