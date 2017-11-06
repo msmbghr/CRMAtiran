@@ -95,7 +95,7 @@ namespace APPCRMAtiran
 
             if (chboxnameCustomers.Checked && shMo > 0)
             {
-                query2 = query2.Where(cut => cut.SHMO == shMo);
+                query2 = query2.Where(cut => cut.CustomerID == shMo);
             }
             if (chbxVersion.Checked && cmbversion.Items.IndexOf(cmbversion.Items.ToString()) != 0)
             {
@@ -104,7 +104,7 @@ namespace APPCRMAtiran
             if (chbxDate.Checked)
             {
                 DateTime startdate=Convert.ToDateTime(myTXTDate1.getYear().ToString()+"/"+ myTXTDate1.getMonth().ToString()+"/"+myTXTDate1.getDay().ToString());
-                DateTime enddate = Convert.ToDateTime(myTXTDate1.getYear().ToString() + "/" + myTXTDate1.getMonth().ToString() + "/" + myTXTDate1.getDay().ToString());
+                DateTime enddate = Convert.ToDateTime(myTXTDate2.getYear().ToString() + "/" + myTXTDate2.getMonth().ToString() + "/" + myTXTDate2.getDay().ToString());
                 query2 = query2.Where(u =>Convert.ToDateTime( u.taskCreationDate) >= startdate && Convert.ToDateTime( u.taskCreationDate) <= enddate);
             }
             dataGridView1.DataSource = query2.ToList();

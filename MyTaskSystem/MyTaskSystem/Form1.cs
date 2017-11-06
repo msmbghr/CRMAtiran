@@ -87,5 +87,21 @@ namespace MyTaskSystem
         {
             panelEdit.Visible = false;
         }
+        private void btnRun_Click(object sender, EventArgs e)
+        {
+            string dateTask = myTXTDate1.getYear().ToString() + "/" + myTXTDate1.getMonth().ToString() + "/" + myTXTDate1.getDay().ToString();
+            t = new taskingEntities();
+            tblTask tbl = new tblTask();
+            tbl.priority =int.Parse( txtPrivoty.Text);
+            tbl.nameCustomer = txtCustomers.Text;
+            tbl.description = rchtxtTasks.Text;
+            if (chbxDone.Checked)
+                tbl.done = true;
+            tbl.dateDone = dateTask;
+            t.tblTask.Add(tbl);
+            t.SaveChanges();
+            MessageBox.Show("Test");
+            ShowAllData();
+        }
     }
 }

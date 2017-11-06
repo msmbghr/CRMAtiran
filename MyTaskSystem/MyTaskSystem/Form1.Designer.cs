@@ -33,21 +33,19 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnRun = new System.Windows.Forms.Button();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.chbxDone = new System.Windows.Forms.CheckBox();
             this.myTXTDate1 = new MyUserControls.MyTXTDate();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.rchtxtTasks = new System.Windows.Forms.RichTextBox();
+            this.txtCustomers = new System.Windows.Forms.TextBox();
+            this.txtPrivoty = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panelEdit = new System.Windows.Forms.Panel();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.label10 = new System.Windows.Forms.Label();
             this.btnEdit = new System.Windows.Forms.Button();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.myTXTDate2 = new MyUserControls.MyTXTDate();
             this.richTextBox2 = new System.Windows.Forms.RichTextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
@@ -73,12 +71,11 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.btnRun);
-            this.panel1.Controls.Add(this.checkBox1);
-            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.chbxDone);
             this.panel1.Controls.Add(this.myTXTDate1);
-            this.panel1.Controls.Add(this.richTextBox1);
-            this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.rchtxtTasks);
+            this.panel1.Controls.Add(this.txtCustomers);
+            this.panel1.Controls.Add(this.txtPrivoty);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
@@ -102,30 +99,20 @@
             this.btnRun.TabIndex = 5;
             this.btnRun.Text = "ثبت";
             this.btnRun.UseVisualStyleBackColor = true;
-            this.btnRun.Click += new System.EventHandler(this.panel1_Click);
+            this.btnRun.Click += new System.EventHandler(this.btnRun_Click);
             // 
-            // checkBox1
+            // chbxDone
             // 
-            this.checkBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(138, 115);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(15, 14);
-            this.checkBox1.TabIndex = 4;
-            this.checkBox1.UseVisualStyleBackColor = true;
-            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
-            this.checkBox1.Click += new System.EventHandler(this.panel1_Click);
-            // 
-            // label4
-            // 
-            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(159, 107);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(84, 29);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "انجام شده";
-            this.label4.Click += new System.EventHandler(this.panel1_Click);
+            this.chbxDone.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.chbxDone.AutoSize = true;
+            this.chbxDone.Location = new System.Drawing.Point(127, 105);
+            this.chbxDone.Name = "chbxDone";
+            this.chbxDone.Size = new System.Drawing.Size(103, 33);
+            this.chbxDone.TabIndex = 4;
+            this.chbxDone.Text = "انجام شده";
+            this.chbxDone.UseVisualStyleBackColor = true;
+            this.chbxDone.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            this.chbxDone.Click += new System.EventHandler(this.panel1_Click);
             // 
             // myTXTDate1
             // 
@@ -141,39 +128,39 @@
             this.myTXTDate1.TabIndex = 3;
             this.myTXTDate1.Click += new System.EventHandler(this.panel1_Click);
             // 
-            // richTextBox1
+            // rchtxtTasks
             // 
-            this.richTextBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.richTextBox1.Location = new System.Drawing.Point(326, 31);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(448, 113);
-            this.richTextBox1.TabIndex = 2;
-            this.richTextBox1.Text = "";
-            this.richTextBox1.Click += new System.EventHandler(this.panel1_Click);
-            this.richTextBox1.Enter += new System.EventHandler(this.panel1_Enter);
-            this.richTextBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
+            this.rchtxtTasks.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.rchtxtTasks.Location = new System.Drawing.Point(326, 31);
+            this.rchtxtTasks.Name = "rchtxtTasks";
+            this.rchtxtTasks.Size = new System.Drawing.Size(448, 113);
+            this.rchtxtTasks.TabIndex = 2;
+            this.rchtxtTasks.Text = "";
+            this.rchtxtTasks.Click += new System.EventHandler(this.panel1_Click);
+            this.rchtxtTasks.Enter += new System.EventHandler(this.panel1_Enter);
+            this.rchtxtTasks.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
             // 
-            // textBox2
+            // txtCustomers
             // 
-            this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox2.Location = new System.Drawing.Point(888, 107);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(175, 37);
-            this.textBox2.TabIndex = 1;
-            this.textBox2.Click += new System.EventHandler(this.panel1_Click);
-            this.textBox2.Enter += new System.EventHandler(this.panel1_Enter);
-            this.textBox2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
+            this.txtCustomers.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtCustomers.Location = new System.Drawing.Point(888, 107);
+            this.txtCustomers.Name = "txtCustomers";
+            this.txtCustomers.Size = new System.Drawing.Size(175, 37);
+            this.txtCustomers.TabIndex = 1;
+            this.txtCustomers.Click += new System.EventHandler(this.panel1_Click);
+            this.txtCustomers.Enter += new System.EventHandler(this.panel1_Enter);
+            this.txtCustomers.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
             // 
-            // textBox1
+            // txtPrivoty
             // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Location = new System.Drawing.Point(888, 28);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(175, 37);
-            this.textBox1.TabIndex = 0;
-            this.textBox1.Click += new System.EventHandler(this.panel1_Click);
-            this.textBox1.Enter += new System.EventHandler(this.panel1_Enter);
-            this.textBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
+            this.txtPrivoty.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtPrivoty.Location = new System.Drawing.Point(888, 28);
+            this.txtPrivoty.Name = "txtPrivoty";
+            this.txtPrivoty.Size = new System.Drawing.Size(175, 37);
+            this.txtPrivoty.TabIndex = 0;
+            this.txtPrivoty.Click += new System.EventHandler(this.panel1_Click);
+            this.txtPrivoty.Enter += new System.EventHandler(this.panel1_Enter);
+            this.txtPrivoty.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
             // 
             // label5
             // 
@@ -221,10 +208,9 @@
             // 
             // panelEdit
             // 
+            this.panelEdit.Controls.Add(this.checkBox2);
             this.panelEdit.Controls.Add(this.label10);
             this.panelEdit.Controls.Add(this.btnEdit);
-            this.panelEdit.Controls.Add(this.checkBox2);
-            this.panelEdit.Controls.Add(this.label6);
             this.panelEdit.Controls.Add(this.myTXTDate2);
             this.panelEdit.Controls.Add(this.richTextBox2);
             this.panelEdit.Controls.Add(this.textBox3);
@@ -240,6 +226,17 @@
             this.panelEdit.Size = new System.Drawing.Size(1158, 195);
             this.panelEdit.TabIndex = 1;
             this.panelEdit.Visible = false;
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Location = new System.Drawing.Point(124, 104);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(103, 33);
+            this.checkBox2.TabIndex = 17;
+            this.checkBox2.Text = "انجام شده";
+            this.checkBox2.UseVisualStyleBackColor = true;
             // 
             // label10
             // 
@@ -261,26 +258,6 @@
             this.btnEdit.Text = "ويرايش";
             this.btnEdit.UseVisualStyleBackColor = true;
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
-            // 
-            // checkBox2
-            // 
-            this.checkBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(142, 115);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(15, 14);
-            this.checkBox2.TabIndex = 13;
-            this.checkBox2.UseVisualStyleBackColor = true;
-            // 
-            // label6
-            // 
-            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(163, 107);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(84, 29);
-            this.label6.TabIndex = 14;
-            this.label6.Text = "انجام شده";
             // 
             // myTXTDate2
             // 
@@ -485,14 +462,11 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.TextBox txtPrivoty;
+        private System.Windows.Forms.TextBox txtCustomers;
+        private System.Windows.Forms.RichTextBox rchtxtTasks;
         private MyUserControls.MyTXTDate myTXTDate1;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.CheckBox chbxDone;
         private MyUserControls.MyTXTDate myTXTDate2;
         private System.Windows.Forms.RichTextBox richTextBox2;
         private System.Windows.Forms.TextBox textBox3;
@@ -510,6 +484,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewCheckBoxColumn done;
+        private System.Windows.Forms.CheckBox checkBox2;
     }
 }
 

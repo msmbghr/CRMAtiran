@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyTaskSystem", "MyTaskSyste
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyUserControls", "MyUserControls\MyUserControls.csproj", "{113DD31B-1EF4-465B-AAF6-E78B48166687}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConnectionProject", "ConnectionProject\ConnectionProject.csproj", "{13A7C88D-CDFF-4258-AB64-78D5CDFA1174}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{113DD31B-1EF4-465B-AAF6-E78B48166687}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{113DD31B-1EF4-465B-AAF6-E78B48166687}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{113DD31B-1EF4-465B-AAF6-E78B48166687}.Release|Any CPU.Build.0 = Release|Any CPU
+		{13A7C88D-CDFF-4258-AB64-78D5CDFA1174}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13A7C88D-CDFF-4258-AB64-78D5CDFA1174}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13A7C88D-CDFF-4258-AB64-78D5CDFA1174}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13A7C88D-CDFF-4258-AB64-78D5CDFA1174}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
