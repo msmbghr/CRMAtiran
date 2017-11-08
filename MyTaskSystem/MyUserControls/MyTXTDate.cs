@@ -16,8 +16,8 @@ namespace MyUserControls
         private Color m_hovercolor1 = Color.FromArgb(225, 174, 0);
         private Color m_hovercolor2 = Color.FromArgb(255, 255, 255);
         public string day;
-        public static string month;
-        public static string year;
+        public  string month;
+        public  string year;
         DateTime dt = DateTime.Now;
         public string msg;
         PersianCalendar p = new PersianCalendar();
@@ -50,7 +50,7 @@ namespace MyUserControls
         {
             return int.Parse(TXTYear.Text);
         }
-
+       
         public MyTXTDate()
         {
             InitializeComponent();
