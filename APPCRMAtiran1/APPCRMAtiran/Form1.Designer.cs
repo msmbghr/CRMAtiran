@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Task = new System.Windows.Forms.TabControl();
@@ -53,7 +55,13 @@
             this.Column17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.chbxDate = new System.Windows.Forms.CheckBox();
+            this.myTXTDate2 = new MyUserControls.MyTXTDate();
+            this.myTXTDate1 = new MyUserControls.MyTXTDate();
+            this.lblSince = new System.Windows.Forms.Label();
+            this.lbluntildate = new System.Windows.Forms.Label();
+            this.Print = new System.Windows.Forms.Button();
             this.chbxcompany = new System.Windows.Forms.CheckBox();
             this.chbxContract = new System.Windows.Forms.CheckBox();
             this.chbxVersion = new System.Windows.Forms.CheckBox();
@@ -72,18 +80,60 @@
             this.cmbdepartment = new System.Windows.Forms.ComboBox();
             this.cmbcompany = new System.Windows.Forms.ComboBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.lblSince = new System.Windows.Forms.Label();
-            this.lbluntildate = new System.Windows.Forms.Label();
-            this.myTXTDate2 = new MyUserControls.MyTXTDate();
-            this.myTXTDate1 = new MyUserControls.MyTXTDate();
-            this.chbxDate = new System.Windows.Forms.CheckBox();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.chbxDate2 = new System.Windows.Forms.CheckBox();
+            this.myTXTDate3 = new MyUserControls.MyTXTDate();
+            this.myTXTDate4 = new MyUserControls.MyTXTDate();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.print2 = new System.Windows.Forms.Button();
+            this.chbxcompany2 = new System.Windows.Forms.CheckBox();
+            this.chbxContract2 = new System.Windows.Forms.CheckBox();
+            this.chbxVersion2 = new System.Windows.Forms.CheckBox();
+            this.chbxusername2 = new System.Windows.Forms.CheckBox();
+            this.chbxphase2 = new System.Windows.Forms.CheckBox();
+            this.chbxproject2 = new System.Windows.Forms.CheckBox();
+            this.chbxdeparment2 = new System.Windows.Forms.CheckBox();
+            this.btnShowReport2 = new System.Windows.Forms.Button();
+            this.chboxnameCustomers2 = new System.Windows.Forms.CheckBox();
+            this.cmbcontract2 = new System.Windows.Forms.ComboBox();
+            this.txtNameCustomers2 = new System.Windows.Forms.TextBox();
+            this.cmbversion2 = new System.Windows.Forms.ComboBox();
+            this.cmbphase2 = new System.Windows.Forms.ComboBox();
+            this.cmbusername2 = new System.Windows.Forms.ComboBox();
+            this.cmbproject2 = new System.Windows.Forms.ComboBox();
+            this.cmbdepartment2 = new System.Windows.Forms.ComboBox();
+            this.cmbcompany2 = new System.Windows.Forms.ComboBox();
             this.Task.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            this.tabPage2.SuspendLayout();
+            this.groupBox6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            this.groupBox4.SuspendLayout();
+            this.groupBox5.SuspendLayout();
             this.SuspendLayout();
             // 
             // Task
@@ -94,7 +144,6 @@
             this.Task.Font = new System.Drawing.Font("B Yekan", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.Task.Location = new System.Drawing.Point(0, 0);
             this.Task.Name = "Task";
-            this.Task.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.Task.RightToLeftLayout = true;
             this.Task.SelectedIndex = 0;
             this.Task.Size = new System.Drawing.Size(1264, 597);
@@ -109,7 +158,7 @@
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(1256, 552);
             this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Task";
+            this.tabPage1.Text = "وظيفه ها";
             this.tabPage1.UseVisualStyleBackColor = true;
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
             // 
@@ -131,14 +180,14 @@
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("B Yekan", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("B Yekan", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -165,8 +214,8 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("B Yekan", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("B Yekan", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(1244, 279);
@@ -324,7 +373,7 @@
             this.groupBox1.AutoSize = true;
             this.groupBox1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.groupBox1.Controls.Add(this.groupBox3);
-            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.Print);
             this.groupBox1.Controls.Add(this.chbxcompany);
             this.groupBox1.Controls.Add(this.chbxContract);
             this.groupBox1.Controls.Add(this.chbxVersion);
@@ -351,17 +400,96 @@
             this.groupBox1.Size = new System.Drawing.Size(1250, 228);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "                                                                         ";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
-            // button1
+            // groupBox3
             // 
-            this.button1.Location = new System.Drawing.Point(82, 164);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(104, 33);
-            this.button1.TabIndex = 11;
-            this.button1.Text = "چاپ";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox3.Controls.Add(this.chbxDate);
+            this.groupBox3.Controls.Add(this.myTXTDate2);
+            this.groupBox3.Controls.Add(this.myTXTDate1);
+            this.groupBox3.Controls.Add(this.lblSince);
+            this.groupBox3.Controls.Add(this.lbluntildate);
+            this.groupBox3.Location = new System.Drawing.Point(706, 139);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(539, 58);
+            this.groupBox3.TabIndex = 12;
+            this.groupBox3.TabStop = false;
+            // 
+            // chbxDate
+            // 
+            this.chbxDate.AutoSize = true;
+            this.chbxDate.Location = new System.Drawing.Point(512, 26);
+            this.chbxDate.Name = "chbxDate";
+            this.chbxDate.Size = new System.Drawing.Size(15, 14);
+            this.chbxDate.TabIndex = 14;
+            this.chbxDate.UseVisualStyleBackColor = true;
+            this.chbxDate.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
+            // myTXTDate2
+            // 
+            this.myTXTDate2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.myTXTDate2.AutoSize = true;
+            this.myTXTDate2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.myTXTDate2.Enabled = false;
+            this.myTXTDate2.Font = new System.Drawing.Font("B Yekan", 11.25F);
+            this.myTXTDate2.Location = new System.Drawing.Point(38, 13);
+            this.myTXTDate2.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.myTXTDate2.Mouseclick = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(174)))), ((int)(((byte)(0)))));
+            this.myTXTDate2.MouseClickLeave = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.myTXTDate2.Name = "myTXTDate2";
+            this.myTXTDate2.SendMessage = null;
+            this.myTXTDate2.Size = new System.Drawing.Size(154, 32);
+            this.myTXTDate2.TabIndex = 13;
+            // 
+            // myTXTDate1
+            // 
+            this.myTXTDate1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.myTXTDate1.AutoSize = true;
+            this.myTXTDate1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.myTXTDate1.Enabled = false;
+            this.myTXTDate1.Font = new System.Drawing.Font("B Yekan", 11.25F);
+            this.myTXTDate1.Location = new System.Drawing.Point(284, 13);
+            this.myTXTDate1.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.myTXTDate1.Mouseclick = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(174)))), ((int)(((byte)(0)))));
+            this.myTXTDate1.MouseClickLeave = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.myTXTDate1.Name = "myTXTDate1";
+            this.myTXTDate1.SendMessage = null;
+            this.myTXTDate1.Size = new System.Drawing.Size(153, 33);
+            this.myTXTDate1.TabIndex = 12;
+            // 
+            // lblSince
+            // 
+            this.lblSince.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblSince.AutoSize = true;
+            this.lblSince.Enabled = false;
+            this.lblSince.Location = new System.Drawing.Point(437, 20);
+            this.lblSince.Name = "lblSince";
+            this.lblSince.Size = new System.Drawing.Size(63, 24);
+            this.lblSince.TabIndex = 10;
+            this.lblSince.Text = "از تاريخ :";
+            // 
+            // lbluntildate
+            // 
+            this.lbluntildate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbluntildate.AutoSize = true;
+            this.lbluntildate.Enabled = false;
+            this.lbluntildate.Location = new System.Drawing.Point(191, 20);
+            this.lbluntildate.Name = "lbluntildate";
+            this.lbluntildate.Size = new System.Drawing.Size(61, 24);
+            this.lbluntildate.TabIndex = 11;
+            this.lbluntildate.Text = "تا تاريخ :";
+            // 
+            // Print
+            // 
+            this.Print.Location = new System.Drawing.Point(82, 164);
+            this.Print.Name = "Print";
+            this.Print.Size = new System.Drawing.Size(104, 33);
+            this.Print.TabIndex = 11;
+            this.Print.Text = "چاپ";
+            this.Print.UseVisualStyleBackColor = true;
+            this.Print.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // chbxcompany
             // 
@@ -565,91 +693,512 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.groupBox6);
+            this.tabPage2.Controls.Add(this.groupBox4);
             this.tabPage2.Location = new System.Drawing.Point(4, 41);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(1256, 552);
             this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
+            this.tabPage2.Text = "قراردادها";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // groupBox3
+            // groupBox6
             // 
-            this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox3.Controls.Add(this.chbxDate);
-            this.groupBox3.Controls.Add(this.myTXTDate2);
-            this.groupBox3.Controls.Add(this.myTXTDate1);
-            this.groupBox3.Controls.Add(this.lblSince);
-            this.groupBox3.Controls.Add(this.lbluntildate);
-            this.groupBox3.Location = new System.Drawing.Point(706, 139);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(539, 58);
-            this.groupBox3.TabIndex = 12;
-            this.groupBox3.TabStop = false;
+            this.groupBox6.AutoSize = true;
+            this.groupBox6.Controls.Add(this.dataGridView2);
+            this.groupBox6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.groupBox6.Location = new System.Drawing.Point(3, 231);
+            this.groupBox6.Margin = new System.Windows.Forms.Padding(0);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(1250, 318);
+            this.groupBox6.TabIndex = 3;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "نمايش تسك ها";
             // 
-            // lblSince
+            // dataGridView2
             // 
-            this.lblSince.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblSince.AutoSize = true;
-            this.lblSince.Enabled = false;
-            this.lblSince.Location = new System.Drawing.Point(437, 20);
-            this.lblSince.Name = "lblSince";
-            this.lblSince.Size = new System.Drawing.Size(63, 24);
-            this.lblSince.TabIndex = 10;
-            this.lblSince.Text = "از تاريخ :";
+            this.dataGridView2.AllowUserToAddRows = false;
+            this.dataGridView2.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("B Yekan", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn6,
+            this.dataGridViewTextBoxColumn7,
+            this.dataGridViewTextBoxColumn8,
+            this.dataGridViewTextBoxColumn9,
+            this.dataGridViewTextBoxColumn10,
+            this.dataGridViewTextBoxColumn11,
+            this.dataGridViewTextBoxColumn12,
+            this.dataGridViewTextBoxColumn13,
+            this.dataGridViewTextBoxColumn14,
+            this.dataGridViewTextBoxColumn15,
+            this.dataGridViewTextBoxColumn16,
+            this.dataGridViewTextBoxColumn17,
+            this.dataGridViewTextBoxColumn18});
+            this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView2.Location = new System.Drawing.Point(3, 36);
+            this.dataGridView2.MultiSelect = false;
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.ReadOnly = true;
+            this.dataGridView2.RowHeadersVisible = false;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("B Yekan", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.dataGridView2.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.dataGridView2.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView2.Size = new System.Drawing.Size(1244, 279);
+            this.dataGridView2.TabIndex = 0;
             // 
-            // lbluntildate
+            // dataGridViewTextBoxColumn1
             // 
-            this.lbluntildate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbluntildate.AutoSize = true;
-            this.lbluntildate.Enabled = false;
-            this.lbluntildate.Location = new System.Drawing.Point(191, 20);
-            this.lbluntildate.Name = "lbluntildate";
-            this.lbluntildate.Size = new System.Drawing.Size(61, 24);
-            this.lbluntildate.TabIndex = 11;
-            this.lbluntildate.Text = "تا تاريخ :";
+            this.dataGridViewTextBoxColumn1.HeaderText = "رديف";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Width = 68;
             // 
-            // myTXTDate2
+            // dataGridViewTextBoxColumn4
             // 
-            this.myTXTDate2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.myTXTDate2.AutoSize = true;
-            this.myTXTDate2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.myTXTDate2.Enabled = false;
-            this.myTXTDate2.Font = new System.Drawing.Font("B Yekan", 11.25F);
-            this.myTXTDate2.Location = new System.Drawing.Point(38, 13);
-            this.myTXTDate2.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.myTXTDate2.Mouseclick = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(174)))), ((int)(((byte)(0)))));
-            this.myTXTDate2.MouseClickLeave = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.myTXTDate2.Name = "myTXTDate2";
-            this.myTXTDate2.SendMessage = null;
-            this.myTXTDate2.Size = new System.Drawing.Size(154, 32);
-            this.myTXTDate2.TabIndex = 13;
+            this.dataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "Moname";
+            this.dataGridViewTextBoxColumn4.HeaderText = "نام مشتري";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
             // 
-            // myTXTDate1
+            // dataGridViewTextBoxColumn5
             // 
-            this.myTXTDate1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.myTXTDate1.AutoSize = true;
-            this.myTXTDate1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.myTXTDate1.Enabled = false;
-            this.myTXTDate1.Font = new System.Drawing.Font("B Yekan", 11.25F);
-            this.myTXTDate1.Location = new System.Drawing.Point(284, 13);
-            this.myTXTDate1.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.myTXTDate1.Mouseclick = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(174)))), ((int)(((byte)(0)))));
-            this.myTXTDate1.MouseClickLeave = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.myTXTDate1.Name = "myTXTDate1";
-            this.myTXTDate1.SendMessage = null;
-            this.myTXTDate1.Size = new System.Drawing.Size(153, 33);
-            this.myTXTDate1.TabIndex = 12;
+            this.dataGridViewTextBoxColumn5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "tedad";
+            this.dataGridViewTextBoxColumn5.HeaderText = "تعداد قرارداد";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            this.dataGridViewTextBoxColumn5.Width = 70;
             // 
-            // chbxDate
+            // dataGridViewTextBoxColumn6
             // 
-            this.chbxDate.AutoSize = true;
-            this.chbxDate.Location = new System.Drawing.Point(512, 26);
-            this.chbxDate.Name = "chbxDate";
-            this.chbxDate.Size = new System.Drawing.Size(15, 14);
-            this.chbxDate.TabIndex = 14;
-            this.chbxDate.UseVisualStyleBackColor = true;
-            this.chbxDate.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "lastcontract";
+            this.dataGridViewTextBoxColumn6.HeaderText = "ت آخرين قرارداد";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
+            this.dataGridViewTextBoxColumn6.Width = 200;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "name";
+            this.dataGridViewTextBoxColumn7.HeaderText = "ورژن";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.ReadOnly = true;
+            this.dataGridViewTextBoxColumn7.Width = 130;
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "countOfSystem";
+            this.dataGridViewTextBoxColumn8.HeaderText = "تعداد سيستم";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.ReadOnly = true;
+            this.dataGridViewTextBoxColumn8.Width = 70;
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "productID";
+            this.dataGridViewTextBoxColumn9.HeaderText = "Column9";
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.dataGridViewTextBoxColumn9.ReadOnly = true;
+            this.dataGridViewTextBoxColumn9.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn10
+            // 
+            this.dataGridViewTextBoxColumn10.DataPropertyName = "taskDoneUserID";
+            this.dataGridViewTextBoxColumn10.HeaderText = "Column10";
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            this.dataGridViewTextBoxColumn10.ReadOnly = true;
+            this.dataGridViewTextBoxColumn10.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn11
+            // 
+            this.dataGridViewTextBoxColumn11.DataPropertyName = "conventionTypeID";
+            this.dataGridViewTextBoxColumn11.HeaderText = "Column11";
+            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            this.dataGridViewTextBoxColumn11.ReadOnly = true;
+            this.dataGridViewTextBoxColumn11.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn12
+            // 
+            this.dataGridViewTextBoxColumn12.DataPropertyName = "CustomerID";
+            this.dataGridViewTextBoxColumn12.HeaderText = "Column12";
+            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
+            this.dataGridViewTextBoxColumn12.ReadOnly = true;
+            this.dataGridViewTextBoxColumn12.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn13
+            // 
+            this.dataGridViewTextBoxColumn13.DataPropertyName = "CompanyID";
+            this.dataGridViewTextBoxColumn13.HeaderText = "Column13";
+            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
+            this.dataGridViewTextBoxColumn13.ReadOnly = true;
+            this.dataGridViewTextBoxColumn13.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn14
+            // 
+            this.dataGridViewTextBoxColumn14.DataPropertyName = "departmentID";
+            this.dataGridViewTextBoxColumn14.HeaderText = "Column14";
+            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
+            this.dataGridViewTextBoxColumn14.ReadOnly = true;
+            this.dataGridViewTextBoxColumn14.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn15
+            // 
+            this.dataGridViewTextBoxColumn15.DataPropertyName = "phaseID";
+            this.dataGridViewTextBoxColumn15.HeaderText = "Column15";
+            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
+            this.dataGridViewTextBoxColumn15.ReadOnly = true;
+            this.dataGridViewTextBoxColumn15.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn16
+            // 
+            this.dataGridViewTextBoxColumn16.DataPropertyName = "projectID";
+            this.dataGridViewTextBoxColumn16.HeaderText = "Column16";
+            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
+            this.dataGridViewTextBoxColumn16.ReadOnly = true;
+            this.dataGridViewTextBoxColumn16.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn17
+            // 
+            this.dataGridViewTextBoxColumn17.DataPropertyName = "taskDoneDate";
+            this.dataGridViewTextBoxColumn17.HeaderText = "Column17";
+            this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
+            this.dataGridViewTextBoxColumn17.ReadOnly = true;
+            this.dataGridViewTextBoxColumn17.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn18
+            // 
+            this.dataGridViewTextBoxColumn18.DataPropertyName = "SHMO";
+            this.dataGridViewTextBoxColumn18.HeaderText = "Column18";
+            this.dataGridViewTextBoxColumn18.Name = "dataGridViewTextBoxColumn18";
+            this.dataGridViewTextBoxColumn18.ReadOnly = true;
+            this.dataGridViewTextBoxColumn18.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn18.Visible = false;
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.AutoSize = true;
+            this.groupBox4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.groupBox4.Controls.Add(this.groupBox5);
+            this.groupBox4.Controls.Add(this.print2);
+            this.groupBox4.Controls.Add(this.chbxcompany2);
+            this.groupBox4.Controls.Add(this.chbxContract2);
+            this.groupBox4.Controls.Add(this.chbxVersion2);
+            this.groupBox4.Controls.Add(this.chbxusername2);
+            this.groupBox4.Controls.Add(this.chbxphase2);
+            this.groupBox4.Controls.Add(this.chbxproject2);
+            this.groupBox4.Controls.Add(this.chbxdeparment2);
+            this.groupBox4.Controls.Add(this.btnShowReport2);
+            this.groupBox4.Controls.Add(this.chboxnameCustomers2);
+            this.groupBox4.Controls.Add(this.cmbcontract2);
+            this.groupBox4.Controls.Add(this.txtNameCustomers2);
+            this.groupBox4.Controls.Add(this.cmbversion2);
+            this.groupBox4.Controls.Add(this.cmbphase2);
+            this.groupBox4.Controls.Add(this.cmbusername2);
+            this.groupBox4.Controls.Add(this.cmbproject2);
+            this.groupBox4.Controls.Add(this.cmbdepartment2);
+            this.groupBox4.Controls.Add(this.cmbcompany2);
+            this.groupBox4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.groupBox4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.groupBox4.Font = new System.Drawing.Font("B Yekan", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.groupBox4.Location = new System.Drawing.Point(3, 3);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(1250, 228);
+            this.groupBox4.TabIndex = 1;
+            this.groupBox4.TabStop = false;
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox5.Controls.Add(this.chbxDate2);
+            this.groupBox5.Controls.Add(this.myTXTDate3);
+            this.groupBox5.Controls.Add(this.myTXTDate4);
+            this.groupBox5.Controls.Add(this.label1);
+            this.groupBox5.Controls.Add(this.label2);
+            this.groupBox5.Location = new System.Drawing.Point(706, 139);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(539, 58);
+            this.groupBox5.TabIndex = 12;
+            this.groupBox5.TabStop = false;
+            // 
+            // chbxDate2
+            // 
+            this.chbxDate2.AutoSize = true;
+            this.chbxDate2.Location = new System.Drawing.Point(512, 26);
+            this.chbxDate2.Name = "chbxDate2";
+            this.chbxDate2.Size = new System.Drawing.Size(15, 14);
+            this.chbxDate2.TabIndex = 14;
+            this.chbxDate2.UseVisualStyleBackColor = true;
+            // 
+            // myTXTDate3
+            // 
+            this.myTXTDate3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.myTXTDate3.AutoSize = true;
+            this.myTXTDate3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.myTXTDate3.Enabled = false;
+            this.myTXTDate3.Font = new System.Drawing.Font("B Yekan", 11.25F);
+            this.myTXTDate3.Location = new System.Drawing.Point(38, 13);
+            this.myTXTDate3.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.myTXTDate3.Mouseclick = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(174)))), ((int)(((byte)(0)))));
+            this.myTXTDate3.MouseClickLeave = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.myTXTDate3.Name = "myTXTDate3";
+            this.myTXTDate3.SendMessage = null;
+            this.myTXTDate3.Size = new System.Drawing.Size(154, 32);
+            this.myTXTDate3.TabIndex = 13;
+            // 
+            // myTXTDate4
+            // 
+            this.myTXTDate4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.myTXTDate4.AutoSize = true;
+            this.myTXTDate4.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.myTXTDate4.Enabled = false;
+            this.myTXTDate4.Font = new System.Drawing.Font("B Yekan", 11.25F);
+            this.myTXTDate4.Location = new System.Drawing.Point(284, 13);
+            this.myTXTDate4.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.myTXTDate4.Mouseclick = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(174)))), ((int)(((byte)(0)))));
+            this.myTXTDate4.MouseClickLeave = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.myTXTDate4.Name = "myTXTDate4";
+            this.myTXTDate4.SendMessage = null;
+            this.myTXTDate4.Size = new System.Drawing.Size(153, 33);
+            this.myTXTDate4.TabIndex = 12;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoSize = true;
+            this.label1.Enabled = false;
+            this.label1.Location = new System.Drawing.Point(437, 20);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(63, 24);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "از تاريخ :";
+            // 
+            // label2
+            // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.AutoSize = true;
+            this.label2.Enabled = false;
+            this.label2.Location = new System.Drawing.Point(191, 20);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(61, 24);
+            this.label2.TabIndex = 11;
+            this.label2.Text = "تا تاريخ :";
+            // 
+            // print2
+            // 
+            this.print2.Location = new System.Drawing.Point(82, 164);
+            this.print2.Name = "print2";
+            this.print2.Size = new System.Drawing.Size(104, 33);
+            this.print2.TabIndex = 11;
+            this.print2.Text = "چاپ";
+            this.print2.UseVisualStyleBackColor = true;
+            // 
+            // chbxcompany2
+            // 
+            this.chbxcompany2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.chbxcompany2.AutoSize = true;
+            this.chbxcompany2.Location = new System.Drawing.Point(1181, 36);
+            this.chbxcompany2.Name = "chbxcompany2";
+            this.chbxcompany2.Size = new System.Drawing.Size(67, 28);
+            this.chbxcompany2.TabIndex = 0;
+            this.chbxcompany2.Text = "شركت";
+            this.chbxcompany2.UseVisualStyleBackColor = true;
+            this.chbxcompany2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
+            // 
+            // chbxContract2
+            // 
+            this.chbxContract2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.chbxContract2.AutoSize = true;
+            this.chbxContract2.Location = new System.Drawing.Point(926, 95);
+            this.chbxContract2.Name = "chbxContract2";
+            this.chbxContract2.Size = new System.Drawing.Size(74, 28);
+            this.chbxContract2.TabIndex = 6;
+            this.chbxContract2.Text = "قرارداد";
+            this.chbxContract2.UseVisualStyleBackColor = true;
+            // 
+            // chbxVersion2
+            // 
+            this.chbxVersion2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.chbxVersion2.AutoSize = true;
+            this.chbxVersion2.Location = new System.Drawing.Point(1188, 91);
+            this.chbxVersion2.Name = "chbxVersion2";
+            this.chbxVersion2.Size = new System.Drawing.Size(60, 28);
+            this.chbxVersion2.TabIndex = 5;
+            this.chbxVersion2.Text = "ورژن";
+            this.chbxVersion2.UseVisualStyleBackColor = true;
+            // 
+            // chbxusername2
+            // 
+            this.chbxusername2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.chbxusername2.AutoSize = true;
+            this.chbxusername2.Location = new System.Drawing.Point(170, 32);
+            this.chbxusername2.Name = "chbxusername2";
+            this.chbxusername2.Size = new System.Drawing.Size(91, 28);
+            this.chbxusername2.TabIndex = 4;
+            this.chbxusername2.Text = "نام كاربري";
+            this.chbxusername2.UseVisualStyleBackColor = true;
+            // 
+            // chbxphase2
+            // 
+            this.chbxphase2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.chbxphase2.AutoSize = true;
+            this.chbxphase2.Location = new System.Drawing.Point(445, 35);
+            this.chbxphase2.Name = "chbxphase2";
+            this.chbxphase2.Size = new System.Drawing.Size(47, 28);
+            this.chbxphase2.TabIndex = 3;
+            this.chbxphase2.Text = "فاز";
+            this.chbxphase2.UseVisualStyleBackColor = true;
+            // 
+            // chbxproject2
+            // 
+            this.chbxproject2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.chbxproject2.AutoSize = true;
+            this.chbxproject2.Location = new System.Drawing.Point(675, 35);
+            this.chbxproject2.Name = "chbxproject2";
+            this.chbxproject2.Size = new System.Drawing.Size(61, 28);
+            this.chbxproject2.TabIndex = 2;
+            this.chbxproject2.Text = "پروژه";
+            this.chbxproject2.UseVisualStyleBackColor = true;
+            this.chbxproject2.CheckedChanged += new System.EventHandler(this.chbxproject2_CheckedChanged);
+            // 
+            // chbxdeparment2
+            // 
+            this.chbxdeparment2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.chbxdeparment2.AutoSize = true;
+            this.chbxdeparment2.Location = new System.Drawing.Point(921, 36);
+            this.chbxdeparment2.Name = "chbxdeparment2";
+            this.chbxdeparment2.Size = new System.Drawing.Size(79, 28);
+            this.chbxdeparment2.TabIndex = 1;
+            this.chbxdeparment2.Text = "دپارتمان";
+            this.chbxdeparment2.UseVisualStyleBackColor = true;
+            this.chbxdeparment2.CheckedChanged += new System.EventHandler(this.chbxdeparment2_CheckedChanged);
+            // 
+            // btnShowReport2
+            // 
+            this.btnShowReport2.Location = new System.Drawing.Point(192, 164);
+            this.btnShowReport2.Name = "btnShowReport2";
+            this.btnShowReport2.Size = new System.Drawing.Size(104, 33);
+            this.btnShowReport2.TabIndex = 10;
+            this.btnShowReport2.Text = "نمايش";
+            this.btnShowReport2.UseVisualStyleBackColor = true;
+            // 
+            // chboxnameCustomers2
+            // 
+            this.chboxnameCustomers2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.chboxnameCustomers2.AutoSize = true;
+            this.chboxnameCustomers2.Location = new System.Drawing.Point(643, 95);
+            this.chboxnameCustomers2.Name = "chboxnameCustomers2";
+            this.chboxnameCustomers2.Size = new System.Drawing.Size(93, 28);
+            this.chboxnameCustomers2.TabIndex = 7;
+            this.chboxnameCustomers2.Text = "نام مشتري";
+            this.chboxnameCustomers2.UseVisualStyleBackColor = true;
+            // 
+            // cmbcontract2
+            // 
+            this.cmbcontract2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmbcontract2.Enabled = false;
+            this.cmbcontract2.Font = new System.Drawing.Font("B Yekan", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.cmbcontract2.FormattingEnabled = true;
+            this.cmbcontract2.Location = new System.Drawing.Point(769, 93);
+            this.cmbcontract2.Name = "cmbcontract2";
+            this.cmbcontract2.Size = new System.Drawing.Size(153, 32);
+            this.cmbcontract2.TabIndex = 6;
+            // 
+            // txtNameCustomers2
+            // 
+            this.txtNameCustomers2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtNameCustomers2.Enabled = false;
+            this.txtNameCustomers2.Font = new System.Drawing.Font("B Yekan", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.txtNameCustomers2.Location = new System.Drawing.Point(292, 93);
+            this.txtNameCustomers2.Name = "txtNameCustomers2";
+            this.txtNameCustomers2.Size = new System.Drawing.Size(351, 32);
+            this.txtNameCustomers2.TabIndex = 1;
+            this.txtNameCustomers2.Text = "---انتخاب نام مشتري ---";
+            this.txtNameCustomers2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // cmbversion2
+            // 
+            this.cmbversion2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmbversion2.Enabled = false;
+            this.cmbversion2.Font = new System.Drawing.Font("B Yekan", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.cmbversion2.FormattingEnabled = true;
+            this.cmbversion2.Location = new System.Drawing.Point(1028, 91);
+            this.cmbversion2.Name = "cmbversion2";
+            this.cmbversion2.Size = new System.Drawing.Size(153, 32);
+            this.cmbversion2.TabIndex = 5;
+            // 
+            // cmbphase2
+            // 
+            this.cmbphase2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmbphase2.Enabled = false;
+            this.cmbphase2.Font = new System.Drawing.Font("B Yekan", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.cmbphase2.FormattingEnabled = true;
+            this.cmbphase2.Location = new System.Drawing.Point(292, 34);
+            this.cmbphase2.Name = "cmbphase2";
+            this.cmbphase2.Size = new System.Drawing.Size(153, 32);
+            this.cmbphase2.TabIndex = 4;
+            // 
+            // cmbusername2
+            // 
+            this.cmbusername2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmbusername2.Enabled = false;
+            this.cmbusername2.Font = new System.Drawing.Font("B Yekan", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.cmbusername2.FormattingEnabled = true;
+            this.cmbusername2.Location = new System.Drawing.Point(16, 29);
+            this.cmbusername2.Name = "cmbusername2";
+            this.cmbusername2.Size = new System.Drawing.Size(153, 32);
+            this.cmbusername2.TabIndex = 4;
+            // 
+            // cmbproject2
+            // 
+            this.cmbproject2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmbproject2.Enabled = false;
+            this.cmbproject2.Font = new System.Drawing.Font("B Yekan", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.cmbproject2.FormattingEnabled = true;
+            this.cmbproject2.Location = new System.Drawing.Point(522, 35);
+            this.cmbproject2.Name = "cmbproject2";
+            this.cmbproject2.Size = new System.Drawing.Size(153, 32);
+            this.cmbproject2.TabIndex = 2;
+            // 
+            // cmbdepartment2
+            // 
+            this.cmbdepartment2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmbdepartment2.Enabled = false;
+            this.cmbdepartment2.Font = new System.Drawing.Font("B Yekan", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.cmbdepartment2.FormattingEnabled = true;
+            this.cmbdepartment2.Location = new System.Drawing.Point(768, 35);
+            this.cmbdepartment2.Name = "cmbdepartment2";
+            this.cmbdepartment2.Size = new System.Drawing.Size(153, 32);
+            this.cmbdepartment2.TabIndex = 1;
+            // 
+            // cmbcompany2
+            // 
+            this.cmbcompany2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmbcompany2.Enabled = false;
+            this.cmbcompany2.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.cmbcompany2.Font = new System.Drawing.Font("B Yekan", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.cmbcompany2.FormattingEnabled = true;
+            this.cmbcompany2.Location = new System.Drawing.Point(1028, 35);
+            this.cmbcompany2.Name = "cmbcompany2";
+            this.cmbcompany2.Size = new System.Drawing.Size(153, 32);
+            this.cmbcompany2.TabIndex = 0;
+            this.cmbcompany2.SelectedIndexChanged += new System.EventHandler(this.cmbcompany2_SelectedIndexChanged);
             // 
             // Form1
             // 
@@ -671,6 +1220,14 @@
             this.groupBox1.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
+            this.groupBox6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -700,6 +1257,38 @@
         private System.Windows.Forms.CheckBox chbxContract;
         private System.Windows.Forms.CheckBox chbxVersion;
         private System.Windows.Forms.ComboBox cmbphase;
+        private System.Windows.Forms.Button Print;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private MyUserControls.MyTXTDate myTXTDate2;
+        private MyUserControls.MyTXTDate myTXTDate1;
+        private System.Windows.Forms.Label lblSince;
+        private System.Windows.Forms.Label lbluntildate;
+        private System.Windows.Forms.CheckBox chbxDate;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.CheckBox chbxDate2;
+        private MyUserControls.MyTXTDate myTXTDate3;
+        private MyUserControls.MyTXTDate myTXTDate4;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button print2;
+        private System.Windows.Forms.CheckBox chbxcompany2;
+        private System.Windows.Forms.CheckBox chbxContract2;
+        private System.Windows.Forms.CheckBox chbxVersion2;
+        private System.Windows.Forms.CheckBox chbxusername2;
+        private System.Windows.Forms.CheckBox chbxphase2;
+        private System.Windows.Forms.CheckBox chbxproject2;
+        private System.Windows.Forms.CheckBox chbxdeparment2;
+        private System.Windows.Forms.Button btnShowReport2;
+        private System.Windows.Forms.CheckBox chboxnameCustomers2;
+        private System.Windows.Forms.ComboBox cmbcontract2;
+        private System.Windows.Forms.TextBox txtNameCustomers2;
+        private System.Windows.Forms.ComboBox cmbversion2;
+        private System.Windows.Forms.ComboBox cmbphase2;
+        private System.Windows.Forms.ComboBox cmbusername2;
+        private System.Windows.Forms.ComboBox cmbproject2;
+        private System.Windows.Forms.ComboBox cmbdepartment2;
+        private System.Windows.Forms.ComboBox cmbcompany2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
@@ -718,13 +1307,24 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column16;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column17;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column18;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private MyUserControls.MyTXTDate myTXTDate2;
-        private MyUserControls.MyTXTDate myTXTDate1;
-        private System.Windows.Forms.Label lblSince;
-        private System.Windows.Forms.Label lbluntildate;
-        private System.Windows.Forms.CheckBox chbxDate;
+        private System.Windows.Forms.GroupBox groupBox6;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn17;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn18;
     }
 }
 

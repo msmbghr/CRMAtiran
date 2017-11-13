@@ -89,8 +89,8 @@ namespace APPCRMAtiran
             }
             if (chbxContract.Checked && cmbcontract.Items.IndexOf(cmbcontract.Items.ToString()) != 0)
             {
-                query2 = query2.Where(cnt =>cnt.conventionTypeID.HasValue==true && cnt.conventionTypeID.Value== cmbcontract.Items.IndexOf(cmbcontract.SelectedItem) + 1);
-                
+                query2 = query2.Where(cnt => cnt.conventionTypeID.HasValue == true && cnt.conventionTypeID.Value == cmbcontract.Items.IndexOf(cmbcontract.SelectedItem) + 1);
+
             }
 
             if (chboxnameCustomers.Checked && shMo > 0)
@@ -99,13 +99,13 @@ namespace APPCRMAtiran
             }
             if (chbxVersion.Checked && cmbversion.Items.IndexOf(cmbversion.Items.ToString()) != 0)
             {
-                query2 = query2.Where(u => u.productID.HasValue==true && u.productID.Value == cmbversion.Items.IndexOf(cmbversion.SelectedItem) + 1);
+                query2 = query2.Where(u => u.productID.HasValue == true && u.productID.Value == cmbversion.Items.IndexOf(cmbversion.SelectedItem) + 1);
             }
             if (chbxDate.Checked)
             {
-                DateTime startdate=Convert.ToDateTime(myTXTDate1.getYear().ToString()+"/"+ myTXTDate1.getMonth().ToString()+"/"+myTXTDate1.getDay().ToString());
+                DateTime startdate = Convert.ToDateTime(myTXTDate1.getYear().ToString() + "/" + myTXTDate1.getMonth().ToString() + "/" + myTXTDate1.getDay().ToString());
                 DateTime enddate = Convert.ToDateTime(myTXTDate2.getYear().ToString() + "/" + myTXTDate2.getMonth().ToString() + "/" + myTXTDate2.getDay().ToString());
-                query2 = query2.Where(u =>Convert.ToDateTime( u.taskCreationDate) >= startdate && Convert.ToDateTime( u.taskCreationDate) <= enddate);
+                query2 = query2.Where(u => Convert.ToDateTime(u.taskCreationDate) >= startdate && Convert.ToDateTime(u.taskCreationDate) <= enddate);
             }
             dataGridView1.DataSource = query2.ToList();
             fcnfillrows();
@@ -138,6 +138,23 @@ namespace APPCRMAtiran
             cmbcompany.DisplayMember = "CompanyName";
 
 
+        }
+        public void fcnContract()
+        {
+            var qcompany = (from c in ctx.companyTask select c).ToList();
+            cmbcompany2.DataSource = qcompany;
+            cmbcompany2.ValueMember = "CompanyID";
+            cmbcompany2.DisplayMember = "CompanyName";
+        }
+        public void departmantcomboContract()
+        {
+            var qdepartment = (from c in ctx.department
+                               where
+      c.companyTask.CompanyID == 1 + cmbcompany.SelectedIndex
+                               select c).ToList();
+            cmbdepartment2.DataSource = qdepartment;
+            cmbdepartment2.ValueMember = "DepartmentID";
+            cmbdepartment2.DisplayMember = "DepartmentName";
         }
 
         public void fcnProduct()
@@ -252,7 +269,7 @@ namespace APPCRMAtiran
             cmbdepartment.ResetText();
             cmbusername.ResetText();
             cmbproject.ResetText();
-           // cmbcompany.ResetText();
+            // cmbcompany.ResetText();
         }
 
         private void chbxdeparment_CheckedChanged(object sender, EventArgs e)
@@ -400,6 +417,70 @@ namespace APPCRMAtiran
                 lblSince.Enabled = false;
                 lbluntildate.Enabled = false;
             }
+        }
+
+        private void checkBox2_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chbxcompany2.Checked)
+            {
+                fcnContract();
+                cmbdepartment2.ResetText();
+                cmbcompany2.Enabled = true;
+                cmbusername2.ResetText();
+                cmbproject2.ResetText();
+            }
+            else
+                cmbcompany2.Enabled = false;
+            cmbdepartment2.Enabled = false;
+            chbxdeparment2.Checked = false;
+            chbxproject2.Checked = false;
+            cmbproject2.Enabled = false;
+            cmbusername2.Enabled = false;
+            chbxphase2.Checked = false;
+            cmbphase2.ResetText();
+            cmbdepartment2.ResetText();
+            cmbusername2.ResetText();
+            cmbproject2.ResetText();
+        }
+
+        private void cmbcompany2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbcompany2.SelectedItem != null)
+            {
+                cmbdepartment2.ResetText();
+                if (cmbdepartment2.Enabled)
+                {
+                    departmantcomboContract();
+                        }
+            }
+        }
+
+        private void chbxdeparment2_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chbxcompany2.Checked && chbxdeparment2.Checked && cmbcompany2.Enabled)
+            {
+                cmbdepartment2.Enabled = true;
+                departmantcomboContract();
+                cmbusername2.ResetText();
+                cmbproject2.ResetText();
+            }
+            else
+            {
+                cmbdepartment2.Enabled = false;
+                chbxproject2.Checked = false;
+                cmbproject2.Enabled = false;
+                cmbusername2.Enabled = false;
+                chbxphase2.Checked = false;
+                cmbusername2.ResetText();
+                cmbproject2.ResetText();
+                cmbdepartment2.ResetText();
+                cmbphase2.ResetText();
+            }
+        }
+
+        private void chbxproject2_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
