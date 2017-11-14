@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Task = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -82,29 +82,13 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.chbxDate2 = new System.Windows.Forms.CheckBox();
-            this.myTXTDate3 = new MyUserControls.MyTXTDate();
             this.myTXTDate4 = new MyUserControls.MyTXTDate();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.myTXTDate3 = new MyUserControls.MyTXTDate();
+            this.lblSince2 = new System.Windows.Forms.Label();
+            this.lbluntildate2 = new System.Windows.Forms.Label();
             this.print2 = new System.Windows.Forms.Button();
             this.chbxcompany2 = new System.Windows.Forms.CheckBox();
             this.chbxContract2 = new System.Windows.Forms.CheckBox();
@@ -123,6 +107,24 @@
             this.cmbproject2 = new System.Windows.Forms.ComboBox();
             this.cmbdepartment2 = new System.Windows.Forms.ComboBox();
             this.cmbcompany2 = new System.Windows.Forms.ComboBox();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Task.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -144,6 +146,7 @@
             this.Task.Font = new System.Drawing.Font("B Yekan", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.Task.Location = new System.Drawing.Point(0, 0);
             this.Task.Name = "Task";
+            this.Task.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.Task.RightToLeftLayout = true;
             this.Task.SelectedIndex = 0;
             this.Task.Size = new System.Drawing.Size(1264, 597);
@@ -180,14 +183,14 @@
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("B Yekan", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("B Yekan", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -214,8 +217,8 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("B Yekan", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("B Yekan", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle14;
             this.dataGridView1.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(1244, 279);
@@ -721,23 +724,25 @@
             // 
             this.dataGridView2.AllowUserToAddRows = false;
             this.dataGridView2.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("B Yekan", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("B Yekan", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle15;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
+            this.Column20,
             this.dataGridViewTextBoxColumn4,
             this.dataGridViewTextBoxColumn5,
             this.dataGridViewTextBoxColumn6,
             this.dataGridViewTextBoxColumn7,
             this.dataGridViewTextBoxColumn8,
             this.dataGridViewTextBoxColumn9,
+            this.Column19,
             this.dataGridViewTextBoxColumn10,
             this.dataGridViewTextBoxColumn11,
             this.dataGridViewTextBoxColumn12,
@@ -753,142 +758,12 @@
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.ReadOnly = true;
             this.dataGridView2.RowHeadersVisible = false;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("B Yekan", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.dataGridView2.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle16.Font = new System.Drawing.Font("B Yekan", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.dataGridView2.RowsDefaultCellStyle = dataGridViewCellStyle16;
             this.dataGridView2.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView2.Size = new System.Drawing.Size(1244, 279);
             this.dataGridView2.TabIndex = 0;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.HeaderText = "رديف";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Width = 68;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "Moname";
-            this.dataGridViewTextBoxColumn4.HeaderText = "نام مشتري";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "tedad";
-            this.dataGridViewTextBoxColumn5.HeaderText = "تعداد قرارداد";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.ReadOnly = true;
-            this.dataGridViewTextBoxColumn5.Width = 70;
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "lastcontract";
-            this.dataGridViewTextBoxColumn6.HeaderText = "ت آخرين قرارداد";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.ReadOnly = true;
-            this.dataGridViewTextBoxColumn6.Width = 200;
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "name";
-            this.dataGridViewTextBoxColumn7.HeaderText = "ورژن";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            this.dataGridViewTextBoxColumn7.ReadOnly = true;
-            this.dataGridViewTextBoxColumn7.Width = 130;
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "countOfSystem";
-            this.dataGridViewTextBoxColumn8.HeaderText = "تعداد سيستم";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            this.dataGridViewTextBoxColumn8.ReadOnly = true;
-            this.dataGridViewTextBoxColumn8.Width = 70;
-            // 
-            // dataGridViewTextBoxColumn9
-            // 
-            this.dataGridViewTextBoxColumn9.DataPropertyName = "productID";
-            this.dataGridViewTextBoxColumn9.HeaderText = "Column9";
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            this.dataGridViewTextBoxColumn9.ReadOnly = true;
-            this.dataGridViewTextBoxColumn9.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn10
-            // 
-            this.dataGridViewTextBoxColumn10.DataPropertyName = "taskDoneUserID";
-            this.dataGridViewTextBoxColumn10.HeaderText = "Column10";
-            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
-            this.dataGridViewTextBoxColumn10.ReadOnly = true;
-            this.dataGridViewTextBoxColumn10.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn11
-            // 
-            this.dataGridViewTextBoxColumn11.DataPropertyName = "conventionTypeID";
-            this.dataGridViewTextBoxColumn11.HeaderText = "Column11";
-            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
-            this.dataGridViewTextBoxColumn11.ReadOnly = true;
-            this.dataGridViewTextBoxColumn11.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn12
-            // 
-            this.dataGridViewTextBoxColumn12.DataPropertyName = "CustomerID";
-            this.dataGridViewTextBoxColumn12.HeaderText = "Column12";
-            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
-            this.dataGridViewTextBoxColumn12.ReadOnly = true;
-            this.dataGridViewTextBoxColumn12.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn13
-            // 
-            this.dataGridViewTextBoxColumn13.DataPropertyName = "CompanyID";
-            this.dataGridViewTextBoxColumn13.HeaderText = "Column13";
-            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
-            this.dataGridViewTextBoxColumn13.ReadOnly = true;
-            this.dataGridViewTextBoxColumn13.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn14
-            // 
-            this.dataGridViewTextBoxColumn14.DataPropertyName = "departmentID";
-            this.dataGridViewTextBoxColumn14.HeaderText = "Column14";
-            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
-            this.dataGridViewTextBoxColumn14.ReadOnly = true;
-            this.dataGridViewTextBoxColumn14.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn15
-            // 
-            this.dataGridViewTextBoxColumn15.DataPropertyName = "phaseID";
-            this.dataGridViewTextBoxColumn15.HeaderText = "Column15";
-            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
-            this.dataGridViewTextBoxColumn15.ReadOnly = true;
-            this.dataGridViewTextBoxColumn15.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn16
-            // 
-            this.dataGridViewTextBoxColumn16.DataPropertyName = "projectID";
-            this.dataGridViewTextBoxColumn16.HeaderText = "Column16";
-            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
-            this.dataGridViewTextBoxColumn16.ReadOnly = true;
-            this.dataGridViewTextBoxColumn16.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn17
-            // 
-            this.dataGridViewTextBoxColumn17.DataPropertyName = "taskDoneDate";
-            this.dataGridViewTextBoxColumn17.HeaderText = "Column17";
-            this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
-            this.dataGridViewTextBoxColumn17.ReadOnly = true;
-            this.dataGridViewTextBoxColumn17.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn18
-            // 
-            this.dataGridViewTextBoxColumn18.DataPropertyName = "SHMO";
-            this.dataGridViewTextBoxColumn18.HeaderText = "Column18";
-            this.dataGridViewTextBoxColumn18.Name = "dataGridViewTextBoxColumn18";
-            this.dataGridViewTextBoxColumn18.ReadOnly = true;
-            this.dataGridViewTextBoxColumn18.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewTextBoxColumn18.Visible = false;
             // 
             // groupBox4
             // 
@@ -927,10 +802,10 @@
             // 
             this.groupBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox5.Controls.Add(this.chbxDate2);
-            this.groupBox5.Controls.Add(this.myTXTDate3);
             this.groupBox5.Controls.Add(this.myTXTDate4);
-            this.groupBox5.Controls.Add(this.label1);
-            this.groupBox5.Controls.Add(this.label2);
+            this.groupBox5.Controls.Add(this.myTXTDate3);
+            this.groupBox5.Controls.Add(this.lblSince2);
+            this.groupBox5.Controls.Add(this.lbluntildate2);
             this.groupBox5.Location = new System.Drawing.Point(706, 139);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(539, 58);
@@ -945,22 +820,7 @@
             this.chbxDate2.Size = new System.Drawing.Size(15, 14);
             this.chbxDate2.TabIndex = 14;
             this.chbxDate2.UseVisualStyleBackColor = true;
-            // 
-            // myTXTDate3
-            // 
-            this.myTXTDate3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.myTXTDate3.AutoSize = true;
-            this.myTXTDate3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.myTXTDate3.Enabled = false;
-            this.myTXTDate3.Font = new System.Drawing.Font("B Yekan", 11.25F);
-            this.myTXTDate3.Location = new System.Drawing.Point(38, 13);
-            this.myTXTDate3.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.myTXTDate3.Mouseclick = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(174)))), ((int)(((byte)(0)))));
-            this.myTXTDate3.MouseClickLeave = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.myTXTDate3.Name = "myTXTDate3";
-            this.myTXTDate3.SendMessage = null;
-            this.myTXTDate3.Size = new System.Drawing.Size(154, 32);
-            this.myTXTDate3.TabIndex = 13;
+            this.chbxDate2.CheckedChanged += new System.EventHandler(this.chbxDate2_CheckedChanged);
             // 
             // myTXTDate4
             // 
@@ -969,36 +829,52 @@
             this.myTXTDate4.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.myTXTDate4.Enabled = false;
             this.myTXTDate4.Font = new System.Drawing.Font("B Yekan", 11.25F);
-            this.myTXTDate4.Location = new System.Drawing.Point(284, 13);
+            this.myTXTDate4.Location = new System.Drawing.Point(38, 13);
             this.myTXTDate4.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.myTXTDate4.Mouseclick = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(174)))), ((int)(((byte)(0)))));
             this.myTXTDate4.MouseClickLeave = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.myTXTDate4.Name = "myTXTDate4";
             this.myTXTDate4.SendMessage = null;
-            this.myTXTDate4.Size = new System.Drawing.Size(153, 33);
-            this.myTXTDate4.TabIndex = 12;
+            this.myTXTDate4.Size = new System.Drawing.Size(154, 32);
+            this.myTXTDate4.TabIndex = 13;
             // 
-            // label1
+            // myTXTDate3
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.Enabled = false;
-            this.label1.Location = new System.Drawing.Point(437, 20);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(63, 24);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "از تاريخ :";
+            this.myTXTDate3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.myTXTDate3.AutoSize = true;
+            this.myTXTDate3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.myTXTDate3.Enabled = false;
+            this.myTXTDate3.Font = new System.Drawing.Font("B Yekan", 11.25F);
+            this.myTXTDate3.Location = new System.Drawing.Point(284, 13);
+            this.myTXTDate3.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.myTXTDate3.Mouseclick = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(174)))), ((int)(((byte)(0)))));
+            this.myTXTDate3.MouseClickLeave = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.myTXTDate3.Name = "myTXTDate3";
+            this.myTXTDate3.SendMessage = null;
+            this.myTXTDate3.Size = new System.Drawing.Size(153, 33);
+            this.myTXTDate3.TabIndex = 12;
             // 
-            // label2
+            // lblSince2
             // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2.AutoSize = true;
-            this.label2.Enabled = false;
-            this.label2.Location = new System.Drawing.Point(191, 20);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(61, 24);
-            this.label2.TabIndex = 11;
-            this.label2.Text = "تا تاريخ :";
+            this.lblSince2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblSince2.AutoSize = true;
+            this.lblSince2.Enabled = false;
+            this.lblSince2.Location = new System.Drawing.Point(437, 20);
+            this.lblSince2.Name = "lblSince2";
+            this.lblSince2.Size = new System.Drawing.Size(63, 24);
+            this.lblSince2.TabIndex = 10;
+            this.lblSince2.Text = "از تاريخ :";
+            // 
+            // lbluntildate2
+            // 
+            this.lbluntildate2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbluntildate2.AutoSize = true;
+            this.lbluntildate2.Enabled = false;
+            this.lbluntildate2.Location = new System.Drawing.Point(191, 20);
+            this.lbluntildate2.Name = "lbluntildate2";
+            this.lbluntildate2.Size = new System.Drawing.Size(61, 24);
+            this.lbluntildate2.TabIndex = 11;
+            this.lbluntildate2.Text = "تا تاريخ :";
             // 
             // print2
             // 
@@ -1008,6 +884,7 @@
             this.print2.TabIndex = 11;
             this.print2.Text = "چاپ";
             this.print2.UseVisualStyleBackColor = true;
+            this.print2.Click += new System.EventHandler(this.print2_Click);
             // 
             // chbxcompany2
             // 
@@ -1031,6 +908,7 @@
             this.chbxContract2.TabIndex = 6;
             this.chbxContract2.Text = "قرارداد";
             this.chbxContract2.UseVisualStyleBackColor = true;
+            this.chbxContract2.CheckedChanged += new System.EventHandler(this.chbxContract2_CheckedChanged);
             // 
             // chbxVersion2
             // 
@@ -1042,6 +920,7 @@
             this.chbxVersion2.TabIndex = 5;
             this.chbxVersion2.Text = "ورژن";
             this.chbxVersion2.UseVisualStyleBackColor = true;
+            this.chbxVersion2.CheckedChanged += new System.EventHandler(this.chbxVersion2_CheckedChanged);
             // 
             // chbxusername2
             // 
@@ -1053,6 +932,7 @@
             this.chbxusername2.TabIndex = 4;
             this.chbxusername2.Text = "نام كاربري";
             this.chbxusername2.UseVisualStyleBackColor = true;
+            this.chbxusername2.CheckedChanged += new System.EventHandler(this.chbxusername2_CheckedChanged);
             // 
             // chbxphase2
             // 
@@ -1064,6 +944,7 @@
             this.chbxphase2.TabIndex = 3;
             this.chbxphase2.Text = "فاز";
             this.chbxphase2.UseVisualStyleBackColor = true;
+            this.chbxphase2.CheckedChanged += new System.EventHandler(this.chbxphase2_CheckedChanged);
             // 
             // chbxproject2
             // 
@@ -1094,9 +975,10 @@
             this.btnShowReport2.Location = new System.Drawing.Point(192, 164);
             this.btnShowReport2.Name = "btnShowReport2";
             this.btnShowReport2.Size = new System.Drawing.Size(104, 33);
-            this.btnShowReport2.TabIndex = 10;
+            this.btnShowReport2.TabIndex = 14;
             this.btnShowReport2.Text = "نمايش";
             this.btnShowReport2.UseVisualStyleBackColor = true;
+            this.btnShowReport2.Click += new System.EventHandler(this.btnShowReport2_Click);
             // 
             // chboxnameCustomers2
             // 
@@ -1108,6 +990,7 @@
             this.chboxnameCustomers2.TabIndex = 7;
             this.chboxnameCustomers2.Text = "نام مشتري";
             this.chboxnameCustomers2.UseVisualStyleBackColor = true;
+            this.chboxnameCustomers2.CheckedChanged += new System.EventHandler(this.chboxnameCustomers2_CheckedChanged);
             // 
             // cmbcontract2
             // 
@@ -1200,6 +1083,152 @@
             this.cmbcompany2.TabIndex = 0;
             this.cmbcompany2.SelectedIndexChanged += new System.EventHandler(this.cmbcompany2_SelectedIndexChanged);
             // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.HeaderText = "رديف";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Width = 68;
+            // 
+            // Column20
+            // 
+            this.Column20.DataPropertyName = "comment";
+            this.Column20.HeaderText = "شرح وظيفه";
+            this.Column20.Name = "Column20";
+            this.Column20.ReadOnly = true;
+            this.Column20.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "Moname";
+            this.dataGridViewTextBoxColumn4.HeaderText = "نام مشتري";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "tedad";
+            this.dataGridViewTextBoxColumn5.HeaderText = "تعداد قرارداد";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            this.dataGridViewTextBoxColumn5.Width = 70;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "lastcontract";
+            this.dataGridViewTextBoxColumn6.HeaderText = "ت آخرين قرارداد";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
+            this.dataGridViewTextBoxColumn6.Width = 200;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "name";
+            this.dataGridViewTextBoxColumn7.HeaderText = "ورژن";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.ReadOnly = true;
+            this.dataGridViewTextBoxColumn7.Width = 130;
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "countOfSystem";
+            this.dataGridViewTextBoxColumn8.HeaderText = "تعداد سيستم";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.ReadOnly = true;
+            this.dataGridViewTextBoxColumn8.Width = 70;
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "productID";
+            this.dataGridViewTextBoxColumn9.HeaderText = "Column9";
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.dataGridViewTextBoxColumn9.ReadOnly = true;
+            this.dataGridViewTextBoxColumn9.Visible = false;
+            // 
+            // Column19
+            // 
+            this.Column19.DataPropertyName = "taskCreationDate";
+            this.Column19.HeaderText = "تاريخ ثبت تسك";
+            this.Column19.Name = "Column19";
+            this.Column19.ReadOnly = true;
+            this.Column19.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn10
+            // 
+            this.dataGridViewTextBoxColumn10.DataPropertyName = "taskDoneUserID";
+            this.dataGridViewTextBoxColumn10.HeaderText = "Column10";
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            this.dataGridViewTextBoxColumn10.ReadOnly = true;
+            this.dataGridViewTextBoxColumn10.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn11
+            // 
+            this.dataGridViewTextBoxColumn11.DataPropertyName = "conventionTypeID";
+            this.dataGridViewTextBoxColumn11.HeaderText = "Column11";
+            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            this.dataGridViewTextBoxColumn11.ReadOnly = true;
+            this.dataGridViewTextBoxColumn11.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn12
+            // 
+            this.dataGridViewTextBoxColumn12.DataPropertyName = "CustomerID";
+            this.dataGridViewTextBoxColumn12.HeaderText = "Column12";
+            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
+            this.dataGridViewTextBoxColumn12.ReadOnly = true;
+            this.dataGridViewTextBoxColumn12.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn13
+            // 
+            this.dataGridViewTextBoxColumn13.DataPropertyName = "CompanyID";
+            this.dataGridViewTextBoxColumn13.HeaderText = "Column13";
+            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
+            this.dataGridViewTextBoxColumn13.ReadOnly = true;
+            this.dataGridViewTextBoxColumn13.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn14
+            // 
+            this.dataGridViewTextBoxColumn14.DataPropertyName = "departmentID";
+            this.dataGridViewTextBoxColumn14.HeaderText = "Column14";
+            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
+            this.dataGridViewTextBoxColumn14.ReadOnly = true;
+            this.dataGridViewTextBoxColumn14.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn15
+            // 
+            this.dataGridViewTextBoxColumn15.DataPropertyName = "phaseID";
+            this.dataGridViewTextBoxColumn15.HeaderText = "Column15";
+            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
+            this.dataGridViewTextBoxColumn15.ReadOnly = true;
+            this.dataGridViewTextBoxColumn15.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn16
+            // 
+            this.dataGridViewTextBoxColumn16.DataPropertyName = "projectID";
+            this.dataGridViewTextBoxColumn16.HeaderText = "Column16";
+            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
+            this.dataGridViewTextBoxColumn16.ReadOnly = true;
+            this.dataGridViewTextBoxColumn16.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn17
+            // 
+            this.dataGridViewTextBoxColumn17.DataPropertyName = "taskDoneDate";
+            this.dataGridViewTextBoxColumn17.HeaderText = "Column17";
+            this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
+            this.dataGridViewTextBoxColumn17.ReadOnly = true;
+            this.dataGridViewTextBoxColumn17.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn18
+            // 
+            this.dataGridViewTextBoxColumn18.DataPropertyName = "SHMO";
+            this.dataGridViewTextBoxColumn18.HeaderText = "Column18";
+            this.dataGridViewTextBoxColumn18.Name = "dataGridViewTextBoxColumn18";
+            this.dataGridViewTextBoxColumn18.ReadOnly = true;
+            this.dataGridViewTextBoxColumn18.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn18.Visible = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1267,10 +1296,10 @@
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.CheckBox chbxDate2;
-        private MyUserControls.MyTXTDate myTXTDate3;
         private MyUserControls.MyTXTDate myTXTDate4;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private MyUserControls.MyTXTDate myTXTDate3;
+        private System.Windows.Forms.Label lblSince2;
+        private System.Windows.Forms.Label lbluntildate2;
         private System.Windows.Forms.Button print2;
         private System.Windows.Forms.CheckBox chbxcompany2;
         private System.Windows.Forms.CheckBox chbxContract2;
@@ -1310,12 +1339,14 @@
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column20;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column19;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
