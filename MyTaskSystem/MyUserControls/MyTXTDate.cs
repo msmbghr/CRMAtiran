@@ -35,7 +35,10 @@ namespace MyUserControls
         [Category("MSM_Behavior")]
         [Description("هيچ توضيحي نوشته نشده است")]
         public string SendMessage { get { return msg; } set { msg = value; Invalidate(); } }
-        //public string getDay { get { return TXTDay.Text; }  }
+        public int setday { set { TXTDay.Text=value.ToString(); } }
+        public int setMonth { set { TXTMonth.Text = value.ToString(); } }
+        public int setYear { set { TXTYear.Text = value.ToString(); } }
+
         //public string getMonth { get { return TXTMonth.Text; } }
         //public string getYear { get { return TXTYear.Text; } }
         public int getDay()
