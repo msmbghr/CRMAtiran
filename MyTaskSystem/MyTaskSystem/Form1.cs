@@ -16,7 +16,8 @@ namespace MyTaskSystem
         {
             InitializeComponent();
         }
-        taskingEntities t;
+        taskingEntities context;
+        int Id = 0;
         private void myTXTDate1_Load(object sender, EventArgs e)
         {
 
@@ -50,6 +51,7 @@ namespace MyTaskSystem
             myTXTDate2.setYear = int.Parse(s[0]);
             myTXTDate2.setMonth = int.Parse(s[1]);
             myTXTDate2.setday = int.Parse(s[2]);
+            Id=int.Parse(dataGridView1.CurrentRow.Cells[1].Value.ToString());
 
 
         }
@@ -60,6 +62,25 @@ namespace MyTaskSystem
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
+            tblTask tblsave = context.tblTask.Where(c => c.id == Id).FirstOrDefault<tblTask>();
+            if (tblsave!=null)
+            {
+                string dateEditTask = myTXTDate2.getYear().ToString() + "/" + myTXTDate2.getMonth().ToString() + "/" + myTXTDate2.getDay().ToString();
+                tblsave.priority =int.Parse( txteditProvity.Text);
+                tblsave.nameCustomer = txteditNameCustoemrs.Text;
+                tblsave.description = rcheditdescriptions.Text;
+                tblsave.dateDone = dateEditTask;
+                if (chbxEditDone.Checked)
+                    tblsave.done = true;
+                else
+                {
+                    tblsave.done = false;
+                }
+                context.Entry(tblsave).State = System.Data.Entity.EntityState.Modified;
+                context.SaveChanges();
+                MessageBox.Show("اطلاعات با موفقيت ويرايش شد");
+            }
+            ShowAllData();
             panelEdit.Visible = false;
         }
 
@@ -72,8 +93,8 @@ namespace MyTaskSystem
         }
         public void ShowAllData()
         {
-            t = new taskingEntities();
-            var q = from c in t.tblTask orderby c.priority descending select c;
+            context = new taskingEntities();
+            var q = from c in context.tblTask orderby c.priority descending select c;
             dataGridView1.DataSource = q.ToList();
             rdfs();
 
@@ -105,7 +126,7 @@ namespace MyTaskSystem
         private void btnRun_Click(object sender, EventArgs e)
         {
             string dateTask = myTXTDate1.getYear().ToString() + "/" + myTXTDate1.getMonth().ToString() + "/" + myTXTDate1.getDay().ToString();
-            t = new taskingEntities();
+            context = new taskingEntities();
             tblTask tbl = new tblTask();
             tbl.priority = int.Parse(txtPrivoty.Text);
             tbl.nameCustomer = txtCustomers.Text;
@@ -113,8 +134,8 @@ namespace MyTaskSystem
             if (chbxDone.Checked)
                 tbl.done = true;
             tbl.dateDone = dateTask;
-            t.tblTask.Add(tbl);
-            t.SaveChanges();
+            context.tblTask.Add(tbl);
+            context.SaveChanges();
             ShowAllData();
             cleartxt();
         }
@@ -129,6 +150,11 @@ namespace MyTaskSystem
             myTXTDate2.setYear = int.Parse(s[0]);
             myTXTDate2.setMonth = int.Parse(s[1]);
             myTXTDate2.setday = int.Parse(s[2]);
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
