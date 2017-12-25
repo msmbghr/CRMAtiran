@@ -153,7 +153,7 @@ namespace AtiranUpdateFiles
                     string ProcessName = testProcess.ProcessName;
 
                     ProcessName = ProcessName.ToLower();
-                    if (ProcessName.CompareTo("atiran") == 0)
+                    if (ProcessName.Contains("atiran") )
                     {
                         returnMSG = "در حال بستن آتيرانهاي باز شده";
                         testProcess.Kill();
