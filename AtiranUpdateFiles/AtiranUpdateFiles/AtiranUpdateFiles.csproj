@@ -49,9 +49,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>automatic_updates.ico</ApplicationIcon>
+    <ApplicationIcon>interact.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Interop.IWshRuntimeLibrary">
+      <HintPath>..\..\..\..\..\Documents\Visual Studio 2015\Projects\WindowsFormsApplication2\WindowsFormsApplication2\bin\Debug\Interop.IWshRuntimeLibrary.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Interop.Shell32">
+      <HintPath>..\..\..\..\..\Documents\Visual Studio 2015\Projects\WindowsFormsApplication2\WindowsFormsApplication2\bin\Debug\Interop.Shell32.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
     <Reference Include="MRG.Controls.UI">
       <HintPath>..\..\..\..\..\Desktop\Project_Final\Project_Final\bin\Debug\MRG.Controls.UI.dll</HintPath>
     </Reference>
@@ -138,6 +146,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="automatic_updates.ico" />
+    <Content Include="interact.ico" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">

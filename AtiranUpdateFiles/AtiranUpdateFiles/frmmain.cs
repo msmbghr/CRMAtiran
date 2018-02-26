@@ -1,4 +1,5 @@
-﻿using System;
+﻿using IWshRuntimeLibrary;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,7 +20,16 @@ namespace AtiranUpdateFiles
         public frmmain()
         {
             InitializeComponent();
+            ConfigureXML();
         }
+        string programName;
+        string programNameOnDesktop;
+        string localpath;
+        string ftpServerIP;
+        string ftpUserID;
+        string ftpPassword;
+        string ServerPath;
+        string ftpuri;
         private void frmmain_Load(object sender, EventArgs e)
         {
             backgroundWorker1.RunWorkerAsync();
@@ -50,14 +60,7 @@ namespace AtiranUpdateFiles
 
         private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
         {
-            XmlDocument xmldoc = new XmlDocument();
-            xmldoc.Load(@"FTPSetting.xml");
-            string ftpServerIP = xmldoc.SelectSingleNode("setting/IPServer").InnerText;
-            string ftpUserID = xmldoc.SelectSingleNode("setting/FTPUserName").InnerText;
-            string ftpPassword = xmldoc.SelectSingleNode("setting/FTPPassword").InnerText;
-            string ServerPath = xmldoc.SelectSingleNode("setting/ServerPath").InnerText;
-            string ftpuri = @"ftp://" + ftpServerIP + ServerPath;
-            string localpath = xmldoc.SelectSingleNode("setting/LocalPath").InnerText;//D:\sac#2\atiran2\Release
+            
             FTP_Functions f = new FTP_Functions();
             f.testcompare(ftpServerIP, ftpUserID, ftpPassword, ftpuri, localpath);
             int size = 0;
@@ -90,10 +93,16 @@ namespace AtiranUpdateFiles
                                 f.sizePath(ftpuri, localpath);
                                 size = FTP_Functions.sizeAllfile;
                                 frmchild c = new frmchild();
-                                c.ShowDialog();
+
+                            
+                            c.ShowDialog();
                             messagebox m1 = new messagebox();
                             m1.gettext("برنامه آتيران با موفقيت آپديت شد", "تاييد", "انصراف", 1);
                             m1.ShowDialog();
+
+                            
+                            
+
                             Application.Exit();
                             break;
                             
@@ -107,6 +116,7 @@ namespace AtiranUpdateFiles
                             size = FTP_Functions.sizeAllfile;
                             frmchild c = new frmchild();
                             c.ShowDialog();
+                            //f.CreateShortcutAtiran(programName, localpath, programNameOnDesktop);////درست كردن شرت كات
                             messagebox m1 = new messagebox();
                             m1.gettext("برنامه آتيران با موفقيت آپديت شد", "تاييد", "انصراف", 1);
                             m1.ShowDialog();
@@ -132,6 +142,68 @@ namespace AtiranUpdateFiles
             lblStatus.Visible = true;
             lblStatus.Text = FTP_Functions.returnMSG;
 
+        }
+
+        //public string GetShortcutTargetFile(string shortcutFilename)
+        //{
+        //    string pathOnly = Path.GetDirectoryName(shortcutFilename);
+        //    string filenameOnly = Path.GetFileName(shortcutFilename);
+
+        //    Shell32.Shell shell = new Shell32.Shell();
+        //    Shell32.Folder folder = shell.NameSpace(pathOnly);
+        //    Shell32.FolderItem folderItem = folder.ParseName(filenameOnly);
+        //    if (folderItem != null)
+        //    {
+        //        Shell32.ShellLinkObject link = (Shell32.ShellLinkObject)folderItem.GetLink;
+        //        return link.Path;
+        //    }
+
+        //    return String.Empty; // Not found
+        //}
+        //public void DeleteStartupFolderShortcuts(string targetExeName)
+        //{
+        //    string startUpFolderPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+
+        //    DirectoryInfo di = new DirectoryInfo(startUpFolderPath);
+        //    FileInfo[] files = di.GetFiles("*.lnk");
+
+        //    foreach (FileInfo fi in files)
+        //    {
+        //        string shortcutTargetFile = GetShortcutTargetFile(fi.FullName);
+        //        Console.WriteLine("{0} -> {1}", fi.Name, shortcutTargetFile);
+
+        //        if (shortcutTargetFile.EndsWith(targetExeName, StringComparison.InvariantCultureIgnoreCase))
+        //        {
+        //            System.IO.File.Delete(fi.FullName);
+        //        }
+        //    }
+        //}
+        //public void CreateShortcutAtiran(string strTarget, string localpath, string programNameOnDesktop)
+        //{
+        //    WshShell wshShell = new WshShell();
+        //    IWshRuntimeLibrary.IWshShortcut shortcut;
+        //    string startUpFolderPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+        //    // Create the shortcut
+        //    shortcut = (IWshRuntimeLibrary.IWshShortcut)wshShell.CreateShortcut(startUpFolderPath + "\\" + programNameOnDesktop + ".lnk");
+        //    shortcut.TargetPath = localpath + "\\" + strTarget;
+        //    shortcut.WorkingDirectory = localpath;
+        //    shortcut.Description = "آتيران همراه هميشگي شماست";
+        //    //      shortcut.IconLocation = Application.StartupPath + @"\App.ico";
+        //    shortcut.Save();
+        //}
+        public void ConfigureXML()
+        {
+            XmlDocument xmldoc = new XmlDocument();
+           
+            xmldoc.Load(@"FTPSetting.xml");
+            ftpServerIP = xmldoc.SelectSingleNode("setting/IPServer").InnerText;
+            ftpUserID = xmldoc.SelectSingleNode("setting/FTPUserName").InnerText;
+            ftpPassword = xmldoc.SelectSingleNode("setting/FTPPassword").InnerText;
+            ServerPath = xmldoc.SelectSingleNode("setting/ServerPath").InnerText;
+            ftpuri = @"ftp://" + ftpServerIP + ServerPath;
+            localpath = xmldoc.SelectSingleNode("setting/LocalPath").InnerText;//D:\sac#2\atiran2\Release
+            programName = xmldoc.SelectSingleNode("setting/programName").InnerText;
+            programNameOnDesktop = xmldoc.SelectSingleNode("setting/programNameOnDesktop").InnerText;
         }
     }
 }

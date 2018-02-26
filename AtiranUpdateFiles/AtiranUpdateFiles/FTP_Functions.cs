@@ -1,4 +1,5 @@
-﻿using System;
+﻿using IWshRuntimeLibrary;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
@@ -29,7 +30,7 @@ namespace AtiranUpdateFiles
             XmlDocument xmldoc = new XmlDocument();
             xmldoc.Load(@"FTPSetting.xml");
             pathCI = xmldoc.SelectSingleNode("setting/pathCICode").InnerText;
-            bool filexistS = File.Exists(@pathCI);
+            bool filexistS = System.IO.File.Exists(@pathCI);
             if (filexistS)
             {
                 StreamReader sr1 = new StreamReader(@pathCI);
@@ -47,7 +48,7 @@ namespace AtiranUpdateFiles
                     //sw.Close();
 
                     ftpServerIP = serverIP; ftpUserID = UserID; ftpPassword = Password; ftpuri = uri; ftplocalpath = localpath;
-                   // sizePath(ftpuri, ftplocalpath);
+                    // sizePath(ftpuri, ftplocalpath);
 
                     codeMsg = 2;//آتيران شما آپديت نشده است
                 }
@@ -58,7 +59,8 @@ namespace AtiranUpdateFiles
             }
             return codeMsg;
         }
-        public bool updatetxtserver() {
+        public bool updatetxtserver()
+        {
             try
             {
                 StreamWriter sw = new StreamWriter(@pathCI);
@@ -70,7 +72,7 @@ namespace AtiranUpdateFiles
             {
                 return false;
             }
-           
+
         }
         public void sizePath(string uri, string localPath)
         {
@@ -123,7 +125,7 @@ namespace AtiranUpdateFiles
             try
             {
                 WebClient request = new WebClient();
-                request.Credentials = new NetworkCredential(ftpUserID, ftpPassword);             
+                request.Credentials = new NetworkCredential(ftpUserID, ftpPassword);
                 Stream str = request.OpenRead(ftpuri + "code.txt");
                 StreamReader st = new StreamReader(str);
                 string getDataCodeServer = st.ReadToEnd();
@@ -137,10 +139,10 @@ namespace AtiranUpdateFiles
                 messagebox m1 = new messagebox();
                 m1.gettext("سيستم شما به سرور متصل نيست", "تاييد", "انصراف", 1);
                 m1.ShowDialog(); Application.Exit();
-                
+
             }
             return "";
-                
+
         }
 
         public void KillProgramAT()
@@ -153,7 +155,7 @@ namespace AtiranUpdateFiles
                     string ProcessName = testProcess.ProcessName;
 
                     ProcessName = ProcessName.ToLower();
-                    if (ProcessName.Contains("atiran") )
+                    if (ProcessName.Contains("atiran"))
                     {
                         returnMSG = "در حال بستن آتيرانهاي باز شده";
                         testProcess.Kill();
@@ -165,7 +167,7 @@ namespace AtiranUpdateFiles
         }
 
 
-        public void UpdateProgram() { copy_ftp(ftpuri,ftplocalpath); }
+        public void UpdateProgram() { copy_ftp(ftpuri, ftplocalpath); }
         public void copy_ftp(string uri, string localPath)
         {
             FtpWebRequest listRequest = (FtpWebRequest)WebRequest.Create(uri);
@@ -220,6 +222,53 @@ namespace AtiranUpdateFiles
             //sw.Close();
         }
 
+        public void CreateShortcutAtiran(string strTarget, string localpath, string programNameOnDesktop)
+        {
+            WshShell wshShell = new WshShell();
+            IWshRuntimeLibrary.IWshShortcut shortcut;
+            string startUpFolderPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+            // Create the shortcut
+            shortcut = (IWshRuntimeLibrary.IWshShortcut)wshShell.CreateShortcut(startUpFolderPath + "\\" + programNameOnDesktop + ".lnk");
+            shortcut.TargetPath = localpath + "\\" + strTarget;
+            shortcut.WorkingDirectory = localpath;
+            shortcut.Description = "آتيران همراه هميشگي شماست";
+            //      shortcut.IconLocation = Application.StartupPath + @"\App.ico";
+            shortcut.Save();
+        }
+
+        public void DeleteStartupFolderShortcuts(string targetExeName)
+        {
+            string startUpFolderPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+            DirectoryInfo di = new DirectoryInfo(startUpFolderPath);
+            FileInfo[] files = di.GetFiles("*.lnk");
+
+            foreach (FileInfo fi in files)
+            {
+                string shortcutTargetFile = GetShortcutTargetFile(fi.FullName);
+                Console.WriteLine("{0} -> {1}", fi.Name, shortcutTargetFile);
+
+                if (shortcutTargetFile.EndsWith(targetExeName, StringComparison.InvariantCultureIgnoreCase))
+                {
+                    System.IO.File.Delete(fi.FullName);
+                }
+            }
+        }
+        public string GetShortcutTargetFile(string shortcutFilename)
+        {
+            string pathOnly = Path.GetDirectoryName(shortcutFilename);
+            string filenameOnly = Path.GetFileName(shortcutFilename);
+
+            Shell32.Shell shell = new Shell32.Shell();
+            Shell32.Folder folder = shell.NameSpace(pathOnly);
+            Shell32.FolderItem folderItem = folder.ParseName(filenameOnly);
+            if (folderItem != null)
+            {
+                Shell32.ShellLinkObject link = (Shell32.ShellLinkObject)folderItem.GetLink;
+                return link.Path;
+            }
+
+            return String.Empty; // Not found
+        }
     }
 
 }
