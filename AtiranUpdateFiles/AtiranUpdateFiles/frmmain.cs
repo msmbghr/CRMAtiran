@@ -20,7 +20,6 @@ namespace AtiranUpdateFiles
         public frmmain()
         {
             InitializeComponent();
-            ConfigureXML();
         }
         string programName;
         string programNameOnDesktop;
@@ -32,7 +31,10 @@ namespace AtiranUpdateFiles
         string ftpuri;
         private void frmmain_Load(object sender, EventArgs e)
         {
-            backgroundWorker1.RunWorkerAsync();
+            ConfigureXML();
+           
+                backgroundWorker1.RunWorkerAsync();
+            
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -193,17 +195,26 @@ namespace AtiranUpdateFiles
         //}
         public void ConfigureXML()
         {
-            XmlDocument xmldoc = new XmlDocument();
-           
-            xmldoc.Load(@"FTPSetting.xml");
-            ftpServerIP = xmldoc.SelectSingleNode("setting/IPServer").InnerText;
-            ftpUserID = xmldoc.SelectSingleNode("setting/FTPUserName").InnerText;
-            ftpPassword = xmldoc.SelectSingleNode("setting/FTPPassword").InnerText;
-            ServerPath = xmldoc.SelectSingleNode("setting/ServerPath").InnerText;
-            ftpuri = @"ftp://" + ftpServerIP + ServerPath;
-            localpath = xmldoc.SelectSingleNode("setting/LocalPath").InnerText;//D:\sac#2\atiran2\Release
-            programName = xmldoc.SelectSingleNode("setting/programName").InnerText;
-            programNameOnDesktop = xmldoc.SelectSingleNode("setting/programNameOnDesktop").InnerText;
+            try
+            {
+                XmlDocument xmldoc = new XmlDocument();
+                xmldoc.Load(@"FTPSetting.xml");
+                ftpServerIP = xmldoc.SelectSingleNode("setting/IPServer").InnerText;
+                ftpUserID = xmldoc.SelectSingleNode("setting/FTPUserName").InnerText;
+                ftpPassword = xmldoc.SelectSingleNode("setting/FTPPassword").InnerText;
+                ServerPath = xmldoc.SelectSingleNode("setting/ServerPath").InnerText;
+                ftpuri = @"ftp://" + ftpServerIP + ServerPath;
+                localpath = xmldoc.SelectSingleNode("setting/LocalPath").InnerText;//D:\sac#2\atiran2\Release
+                programName = xmldoc.SelectSingleNode("setting/programName").InnerText;
+                programNameOnDesktop = xmldoc.SelectSingleNode("setting/programNameOnDesktop").InnerText;
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("مشكل در خواندن ديتاي اوليه");
+                Application.Exit();
+                this.Close();
+            }
+            
         }
     }
 }

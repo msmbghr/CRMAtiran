@@ -133,7 +133,7 @@ namespace AtiranUpdateFiles
                 Thread.Sleep(500);
                 return getDataCodeServer;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
 
                 messagebox m1 = new messagebox();
